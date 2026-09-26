@@ -1,0 +1,50 @@
+[
+{
+  "directory": "/Users/jorgerodriguez/MPLABProjects/multiMatrix/_build/multiMatrix/default",
+  "command": "/Applications/microchip/xc8/v3.10/bin/xc8-cc -DXPRJ_default=default -D__18F25K80__ -D__DEBUG=1 -c -mcpu=18F25K80 -mdfp=/Users/jorgerodriguez/.mchp_packs/Microchip/PIC18F-K_DFP/1.17.312/xc8 -fno-short-double -fno-short-float -memi=wordwrite -O0 -maddrqual=ignore -mwarn=-3 -msummary=-psect,-class,+mem,-hex,-file -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto -o CMakeFiles/multiMatrix_default_default_XC8_compile.dir/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/hc164.c.p1 -c /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/hc164.c",
+  "file": "/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/hc164.c",
+  "output": "/Users/jorgerodriguez/MPLABProjects/multiMatrix/_build/multiMatrix/default/CMakeFiles/multiMatrix_default_default_XC8_compile.dir/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/hc164.c.p1"
+},
+{
+  "directory": "/Users/jorgerodriguez/MPLABProjects/multiMatrix/_build/multiMatrix/default",
+  "command": "/Applications/microchip/xc8/v3.10/bin/xc8-cc -DXPRJ_default=default -D__18F25K80__ -D__DEBUG=1 -c -mcpu=18F25K80 -mdfp=/Users/jorgerodriguez/.mchp_packs/Microchip/PIC18F-K_DFP/1.17.312/xc8 -fno-short-double -fno-short-float -memi=wordwrite -O0 -maddrqual=ignore -mwarn=-3 -msummary=-psect,-class,+mem,-hex,-file -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto -o CMakeFiles/multiMatrix_default_default_XC8_compile.dir/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c.p1 -c /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c",
+  "file": "/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c",
+  "output": "/Users/jorgerodriguez/MPLABProjects/multiMatrix/_build/multiMatrix/default/CMakeFiles/multiMatrix_default_default_XC8_compile.dir/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c.p1"
+},
+{
+  "directory": "/Users/jorgerodriguez/MPLABProjects/multiMatrix/_build/multiMatrix/default",
+  "command": "/Applications/microchip/xc8/v3.10/bin/xc8-cc -DXPRJ_default=default -D__18F25K80__ -D__DEBUG=1 -c -mcpu=18F25K80 -mdfp=/Users/jorgerodriguez/.mchp_packs/Microchip/PIC18F-K_DFP/1.17.312/xc8 -fno-short-double -fno-short-float -memi=wordwrite -O0 -maddrqual=ignore -mwarn=-3 -msummary=-psect,-class,+mem,-hex,-file -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto -o CMakeFiles/multiMatrix_default_default_XC8_compile.dir/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/clock.c.p1 -c /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/clock.c",
+  "file": "/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/clock.c",
+  "output": "/Users/jorgerodriguez/MPLABProjects/multiMatrix/_build/multiMatrix/default/CMakeFiles/multiMatrix_default_default_XC8_compile.dir/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/clock.c.p1"
+},
+{
+  "directory": "/Users/jorgerodriguez/MPLABProjects/multiMatrix/_build/multiMatrix/default",
+  "command": "/Applications/microchip/xc8/v3.10/bin/xc8-cc -DXPRJ_default=default -D__18F25K80__ -D__DEBUG=1 -c -mcpu=18F25K80 -mdfp=/Users/jorgerodriguez/.mchp_packs/Microchip/PIC18F-K_DFP/1.17.312/xc8 -fno-short-double -fno-short-float -memi=wordwrite -O0 -maddrqual=ignore -mwarn=-3 -msummary=-psect,-class,+mem,-hex,-file -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto -o CMakeFiles/multiMatrix_default_default_XC8_compile.dir/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/config_bits.c.p1 -c /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/config_bits.c",
+  "file": "/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/config_bits.c",
+  "output": "/Users/jorgerodriguez/MPLABProjects/multiMatrix/_build/multiMatrix/default/CMakeFiles/multiMatrix_default_default_XC8_compile.dir/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/config_bits.c.p1"
+},
+{
+  "directory": "/Users/jorgerodriguez/MPLABProjects/multiMatrix/_build/multiMatrix/default",
+  "command": "/Applications/microchip/xc8/v3.10/bin/xc8-cc -DXPRJ_default=default -D__18F25K80__ -D__DEBUG=1 -c -mcpu=18F25K80 -mdfp=/Users/jorgerodriguez/.mchp_packs/Microchip/PIC18F-K_DFP/1.17.312/xc8 -fno-short-double -fno-short-float -memi=wordwrite -O0 -maddrqual=ignore -mwarn=-3 -msummary=-psect,-class,+mem,-hex,-file -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto -o CMakeFiles/multiMatrix_default_default_XC8_compile.dir/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c.p1 -c /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c",
+  "file": "/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c",
+  "output": "/Users/jorgerodriguez/MPLABProjects/multiMatrix/_build/multiMatrix/default/CMakeFiles/multiMatrix_default_default_XC8_compile.dir/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c.p1"
+},
+{
+  "directory": "/Users/jorgerodriguez/MPLABProjects/multiMatrix/_build/multiMatrix/default",
+  "command": "/Applications/microchip/xc8/v3.10/bin/xc8-cc -DXPRJ_default=default -D__18F25K80__ -D__DEBUG=1 -c -mcpu=18F25K80 -mdfp=/Users/jorgerodriguez/.mchp_packs/Microchip/PIC18F-K_DFP/1.17.312/xc8 -fno-short-double -fno-short-float -memi=wordwrite -O0 -maddrqual=ignore -mwarn=-3 -msummary=-psect,-class,+mem,-hex,-file -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto -o CMakeFiles/multiMatrix_default_default_XC8_compile.dir/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/pins.c.p1 -c /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/pins.c",
+  "file": "/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/pins.c",
+  "output": "/Users/jorgerodriguez/MPLABProjects/multiMatrix/_build/multiMatrix/default/CMakeFiles/multiMatrix_default_default_XC8_compile.dir/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/pins.c.p1"
+},
+{
+  "directory": "/Users/jorgerodriguez/MPLABProjects/multiMatrix/_build/multiMatrix/default",
+  "command": "/Applications/microchip/xc8/v3.10/bin/xc8-cc -DXPRJ_default=default -D__18F25K80__ -D__DEBUG=1 -c -mcpu=18F25K80 -mdfp=/Users/jorgerodriguez/.mchp_packs/Microchip/PIC18F-K_DFP/1.17.312/xc8 -fno-short-double -fno-short-float -memi=wordwrite -O0 -maddrqual=ignore -mwarn=-3 -msummary=-psect,-class,+mem,-hex,-file -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto -o CMakeFiles/multiMatrix_default_default_XC8_compile.dir/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/system.c.p1 -c /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/system.c",
+  "file": "/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/system.c",
+  "output": "/Users/jorgerodriguez/MPLABProjects/multiMatrix/_build/multiMatrix/default/CMakeFiles/multiMatrix_default_default_XC8_compile.dir/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/system.c.p1"
+},
+{
+  "directory": "/Users/jorgerodriguez/MPLABProjects/multiMatrix/_build/multiMatrix/default",
+  "command": "/Applications/microchip/xc8/v3.10/bin/xc8-cc -DXPRJ_default=default -D__18F25K80__ -D__DEBUG=1 -c -mcpu=18F25K80 -mdfp=/Users/jorgerodriguez/.mchp_packs/Microchip/PIC18F-K_DFP/1.17.312/xc8 -fno-short-double -fno-short-float -memi=wordwrite -O0 -maddrqual=ignore -mwarn=-3 -msummary=-psect,-class,+mem,-hex,-file -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto -o CMakeFiles/multiMatrix_default_default_XC8_compile.dir/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c.p1 -c /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c",
+  "file": "/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c",
+  "output": "/Users/jorgerodriguez/MPLABProjects/multiMatrix/_build/multiMatrix/default/CMakeFiles/multiMatrix_default_default_XC8_compile.dir/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c.p1"
+}
+]

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <executable name="/Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.hex">
+    <memory name="program">
+      <units>bytes</units>
+      <length>32768</length>
+      <used>722</used>
+      <free>32046</free>
+    </memory>
+    <memory name="data">
+      <units>bytes</units>
+      <length>3649</length>
+      <used>83</used>
+      <free>3566</free>
+    </memory>
+  </executable>
+</project>

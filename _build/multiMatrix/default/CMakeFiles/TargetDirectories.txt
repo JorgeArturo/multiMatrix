@@ -1,0 +1,4 @@
+/Users/jorgerodriguez/MPLABProjects/multiMatrix/_build/multiMatrix/default/CMakeFiles/multiMatrix_default_default_XC8_compile.dir
+/Users/jorgerodriguez/MPLABProjects/multiMatrix/_build/multiMatrix/default/CMakeFiles/multiMatrix_default_image_CPSJdk4a.dir
+/Users/jorgerodriguez/MPLABProjects/multiMatrix/_build/multiMatrix/default/CMakeFiles/edit_cache.dir
+/Users/jorgerodriguez/MPLABProjects/multiMatrix/_build/multiMatrix/default/CMakeFiles/rebuild_cache.dir
