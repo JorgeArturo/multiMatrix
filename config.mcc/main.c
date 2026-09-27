@@ -79,7 +79,9 @@ int main(void) {
     while(1) {
         // Nada aquí, scroll y corrimiento se hace por la TMR0
         if(clk_switch == 0)
-            LATB = buffer[columna_actual]; // Para debug, ver la columna actual en PORTB
+            LATB = buffer[bit_corrimiento]; // Para debug, ver la columna actual en PORTB
+            
     }
 }
+
 

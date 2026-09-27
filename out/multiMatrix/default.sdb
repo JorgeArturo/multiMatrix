@@ -327,9 +327,9 @@
 "12
 [v _font5x8 font5x8 `C[11][5]uc  1 e 55 0 ]
 "27
-[v _mensaje mensaje `C[12]uc  1 e 12 0 ]
+[v _mensaje mensaje `C[13]uc  1 e 13 0 ]
 "32
-[v _buffer buffer `[60]uc  1 e 60 0 ]
+[v _buffer buffer `[65]uc  1 e 65 0 ]
 "38 /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c
 [v _INT0_InterruptHandler INT0_InterruptHandler `*.37(v  1 e 2 0 ]
 "39
@@ -345,7 +345,7 @@
 "69 /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
 [v _main main `(i  1 e 2 0 ]
 {
-"84
+"85
 } 0
 "5 /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/hc164.c
 [v _hc164_init hc164_init `(v  1 e 1 0 ]

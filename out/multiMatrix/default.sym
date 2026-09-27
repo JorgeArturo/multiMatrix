@@ -1,6 +1,6 @@
 __end_of_generar_buffer_mensaje 10A6 0 CODE 0
 __S0 1286 0 ABS 0
-__S1 54 0 ABS 0
+__S1 59 0 ABS 0
 __S4 0 0 ABS 0
 __S5 0 0 ABS 0
 __Hintentry 0 0 ABS 0
@@ -16,8 +16,8 @@ _LATB F8A 0 ABS 0
 _LATC F8B 0 ABS 0
 _WPUB F5B 0 ABS 0
 __end_of_PIN_MANAGER_Initialize 1208 0 CODE 0
-_bit_corrimiento 41 0 COMRAM 1
-_TMR0_OverflowCallback 43 0 COMRAM 1
+_bit_corrimiento 46 0 COMRAM 1
+_TMR0_OverflowCallback 48 0 COMRAM 1
 _main 1106 0 CODE 0
 ___sp 0 0 STACK 2
 btemp 1 0 ABS 0
@@ -36,7 +36,7 @@ btemp0 1 0 ABS 0
 btemp1 2 0 ABS 0
 __Hconfig 30000E 0 CONFIG 4
 __Lconfig 0 0 CONFIG 4
-_columna_actual 42 0 COMRAM 1
+_columna_actual 47 0 COMRAM 1
 __end_of_INT0_SetInterruptHandler 1280 0 CODE 0
 _CLOCK_Initialize 1242 0 CODE 0
 ___inthi_stack_hi 0 0 STACK 2
@@ -58,7 +58,7 @@ __Lnvrram 0 0 COMRAM 1
 ___intlo_stack_hi 0 0 STACK 2
 int$flags 1 0 ABS 0
 _INTERRUPT_InterruptManager 8 0 CODE 0
-TMR0_OverflowCallbackRegister@callbackHandler 4F 0 COMRAM 1
+TMR0_OverflowCallbackRegister@callbackHandler 54 0 COMRAM 1
 __Hbigsfr 0 0 ABS 0
 __Lbigsfr 0 0 ABS 0
 __end_of_font5x8 1038 0 SMALLCONST 0
@@ -87,7 +87,7 @@ __Lintcode 8 0 CODE 0
 __Hfardata 0 0 FARRAM 0
 __Lfardata 0 0 FARRAM 0
 __pintcode 8 0 CODE 0
-generar_buffer_mensaje@idx 51 0 COMRAM 1
+generar_buffer_mensaje@idx 56 0 COMRAM 1
 _OSCCON FD3 0 ABS 0
 __Habs1 0 0 ABS 0
 __Labs1 0 0 ABS 0
@@ -99,7 +99,7 @@ __LnvFARRAM 0 0 FARRAM 0
 __HnvCOMRAM 0 0 ABS 0
 __LnvCOMRAM 0 0 ABS 0
 ___heap_hi 0 0 ABS 0
-__pnvCOMRAM 43 0 COMRAM 1
+__pnvCOMRAM 48 0 COMRAM 1
 __Hsivt_hi 0 0 CODE 0
 __Lsivt_hi 0 0 CODE 0
 __end_of_TMR0_OverflowCallbackRegister 1258 0 CODE 0
@@ -132,13 +132,13 @@ __Hsivt_lo 18 0 CODE 0
 __Lsivt_lo 18 0 CODE 0
 _OSCCON2 FD2 0 ABS 0
 __end_of_TMR0_DefaultOverflowCallback 1286 0 CODE 0
-generar_buffer_mensaje@c 53 0 COMRAM 1
+generar_buffer_mensaje@c 58 0 COMRAM 1
 _TMR0_OverflowISR 118E 0 CODE 0
 _TRISCbits F94 0 ABS 0
 _T0CONbits FD5 0 ABS 0
 __end_of_INT3_SetInterruptHandler 1262 0 CODE 0
 __end_of_TMR0_CustomISR 1106 0 CODE 0
-generar_buffer_mensaje@l 52 0 COMRAM 1
+generar_buffer_mensaje@l 57 0 COMRAM 1
 _SYSTEM_Initialize 1222 0 CODE 0
 __Hibigdata 0 0 CODE 0
 __Libigdata 0 0 CODE 0
@@ -211,13 +211,13 @@ __ptext8 114A 0 CODE 0
 __ptext9 1258 0 CODE 0
 __Hclrtext 0 0 ABS 0
 __Lclrtext 0 0 ABS 0
-_INT0_InterruptHandler 4B 0 COMRAM 1
-_INT1_InterruptHandler 49 0 COMRAM 1
-_INT2_InterruptHandler 47 0 COMRAM 1
-_INT3_InterruptHandler 45 0 COMRAM 1
+_INT0_InterruptHandler 50 0 COMRAM 1
+_INT1_InterruptHandler 4E 0 COMRAM 1
+_INT2_InterruptHandler 4C 0 COMRAM 1
+_INT3_InterruptHandler 4A 0 COMRAM 1
 __end_of__initialization 1214 0 CODE 0
 ___rparam_used 1 0 ABS 0
-_clk_switch 40 0 COMRAM 1
+_clk_switch 45 0 COMRAM 1
 __end_of_CLOCK_Initialize 124E 0 CODE 0
 __H__absolute__ 0 0 ABS 0
 __L__absolute__ 0 0 ABS 0
@@ -238,8 +238,8 @@ __Hspace_0 1286 0 ABS 0
 __HcstackCOMRAM 0 0 ABS 0
 __Lspace_0 0 0 ABS 0
 __LcstackCOMRAM 0 0 ABS 0
-__pcstackCOMRAM 4D 0 COMRAM 1
-__Hspace_1 54 0 ABS 0
+__pcstackCOMRAM 52 0 COMRAM 1
+__Hspace_1 59 0 ABS 0
 __Lspace_1 0 0 ABS 0
 _TMR0_DefaultOverflowCallback 1284 0 CODE 0
 __Hsmallconst 1046 0 SMALLCONST 0
@@ -261,8 +261,8 @@ __Hspace_4 60000E 0 ABS 0
 __Lspace_4 0 0 ABS 0
 ___stack_lo 0 0 STACK 2
 _PIN_MANAGER_Initialize 11EC 0 CODE 0
-_tmr0PeriodCount 3E 0 COMRAM 1
-__end_of_mensaje 1044 0 SMALLCONST 0
+_tmr0PeriodCount 43 0 COMRAM 1
+__end_of_mensaje 1045 0 SMALLCONST 0
 __Hbank10 0 0 ABS 0
 __Lbank10 0 0 ABS 0
 __Hbank11 0 0 ABS 0
@@ -315,10 +315,10 @@ _TMR0_OverflowCallbackRegister 124E 0 CODE 0
 __end_of_TMR0_OverflowISR 11C4 0 CODE 0
 start_initialization 1208 0 CODE 0
 ___intlo_stack_lo 0 0 STACK 2
-INT0_SetInterruptHandler@InterruptHandler 4F 0 COMRAM 1
-INT1_SetInterruptHandler@InterruptHandler 4F 0 COMRAM 1
-INT2_SetInterruptHandler@InterruptHandler 4F 0 COMRAM 1
-INT3_SetInterruptHandler@InterruptHandler 4F 0 COMRAM 1
+INT0_SetInterruptHandler@InterruptHandler 54 0 COMRAM 1
+INT1_SetInterruptHandler@InterruptHandler 54 0 COMRAM 1
+INT2_SetInterruptHandler@InterruptHandler 54 0 COMRAM 1
+INT3_SetInterruptHandler@InterruptHandler 54 0 COMRAM 1
 __end_of_hc164_init 1242 0 CODE 0
 __initialization 1208 0 CODE 0
 __activetblptr 2 0 ABS 0
@@ -328,27 +328,27 @@ __end_of_TMR0_TMRInterruptEnable 1284 0 CODE 0
 reset_vec 0 3 CODE 0 0
 intcode 8 4F CODE 8 0
 smallconst 1000 1045 SMALLCONST 1000 0
-bssCOMRAM 2 53 COMRAM 2 1
+bssCOMRAM 2 58 COMRAM 2 1
 text2 1046 1285 CODE 1046 0
 %locals
 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-/tmp/xc5BNZTMg/driver_tmp_1.s
-6761 1208 0 CODE 0
-6763 1208 0 CODE 0
-6766 1208 0 CODE 0
-6786 1208 0 CODE 0
-6787 120C 0 CODE 0
-6788 120E 0 CODE 0
+/tmp/xcpvhFoci/driver_tmp_1.s
+6762 1208 0 CODE 0
+6764 1208 0 CODE 0
+6767 1208 0 CODE 0
+6787 1208 0 CODE 0
+6788 120C 0 CODE 0
 6789 120E 0 CODE 0
-6790 1210 0 CODE 0
-6791 1212 0 CODE 0
-6797 1214 0 CODE 0
-6799 1214 0 CODE 0
-6800 1216 0 CODE 0
-6802 1218 0 CODE 0
-6803 121A 0 CODE 0
-6804 121C 0 CODE 0
-6805 121E 0 CODE 0
+6790 120E 0 CODE 0
+6791 1210 0 CODE 0
+6792 1212 0 CODE 0
+6798 1214 0 CODE 0
+6800 1214 0 CODE 0
+6801 1216 0 CODE 0
+6803 1218 0 CODE 0
+6804 121A 0 CODE 0
+6805 121C 0 CODE 0
+6806 121E 0 CODE 0
 /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
 69 1106 0 CODE 0
 70 1106 0 CODE 0
@@ -455,8 +455,8 @@ text2 1046 1285 CODE 1046 0
 48 1248 0 CODE 0
 51 124A 0 CODE 0
 55 124C 0 CODE 0
-/tmp/xc5BNZTMg/driver_tmp_1.s
-8339 8 0 CODE 0
+/tmp/xcpvhFoci/driver_tmp_1.s
+8340 8 0 CODE 0
 /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c
 89 8 0 CODE 0
 92 12 0 CODE 0

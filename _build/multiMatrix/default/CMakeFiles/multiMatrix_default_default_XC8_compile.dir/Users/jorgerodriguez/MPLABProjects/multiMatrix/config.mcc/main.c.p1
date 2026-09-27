@@ -1052,7 +1052,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 "27
-[v _mensaje `Cuc ~T0 @X0 -> 12 `i e ]
+[v _mensaje `Cuc ~T0 @X0 -> 13 `i e ]
 [i _mensaje
 :U ..
 -> -> 0 `i `uc
@@ -1066,11 +1066,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 7 `i `uc
 -> -> 8 `i `uc
 -> -> 9 `i `uc
+-> -> 10 `i `uc
 -> -> 0 `i `uc
 ..
 ]
 "32
-[v _buffer `uc ~T0 @X0 -> 60 `i e ]
+[v _buffer `uc ~T0 @X0 -> 65 `i e ]
 [i _buffer
 :U ..
 -> -> 0 `i `uc
@@ -1216,13 +1217,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 "81
 [e $ ! == -> _clk_switch `i -> 0 `i 1580  ]
 "82
-[e = _LATB *U + &U _buffer * -> _columna_actual `ux -> -> # *U &U _buffer `ui `ux ]
+[e = _LATB *U + &U _buffer * -> _bit_corrimiento `ux -> -> # *U &U _buffer `ui `ux ]
 [e :U 1580 ]
-"83
+"84
 }
 [e :U 1577 ]
 [e $U 1578  ]
 [e :U 1579 ]
-"84
+"85
 [e :UE 1576 ]
 }

@@ -1,7 +1,7 @@
 ### HEXMate logfile and output summary ###
 
 ### Command-line arguments ###
- /tmp/xc5BNZTMg/driver_tmp_3.o
+ /tmp/xcpvhFoci/driver_tmp_3.o
  -O/Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.hex
  -logfile=/Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.hxl
  -addressing=1
@@ -9,21 +9,19 @@
 
 ### Memory Usage ###
  Input file ranges:
-  0h - 3h		(/tmp/xc5BNZTMg/driver_tmp_3.o)
-  8h - 4Fh		(/tmp/xc5BNZTMg/driver_tmp_3.o)
-  1000h - 1044h		(/tmp/xc5BNZTMg/driver_tmp_3.o)
-  1046h - 1285h		(/tmp/xc5BNZTMg/driver_tmp_3.o)
-  300000h - 30000Dh		(/tmp/xc5BNZTMg/driver_tmp_3.o)
+  0h - 3h		(/tmp/xcpvhFoci/driver_tmp_3.o)
+  8h - 4Fh		(/tmp/xcpvhFoci/driver_tmp_3.o)
+  1000h - 1285h		(/tmp/xcpvhFoci/driver_tmp_3.o)
+  300000h - 30000Dh		(/tmp/xcpvhFoci/driver_tmp_3.o)
  Unused ranges:
   4h - 7h
   50h - FFFh
-  1045h - 1045h
   1286h - 2FFFFFh
 
 ### Hex Memory Map ###
  Legend:
   -- = Unused memory
-  H1 = Input file             (/tmp/xc5BNZTMg/driver_tmp_3.o)
+  H1 = Input file             (/tmp/xcpvhFoci/driver_tmp_3.o)
 ----------------------------------------------------------
          | 00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
 ----------------------------------------------------------
@@ -37,7 +35,7 @@
 00001010 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00001020 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00001030 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00001040 | H1 H1 H1 H1 H1 -- H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00001040 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00001050 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00001060 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00001070 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
