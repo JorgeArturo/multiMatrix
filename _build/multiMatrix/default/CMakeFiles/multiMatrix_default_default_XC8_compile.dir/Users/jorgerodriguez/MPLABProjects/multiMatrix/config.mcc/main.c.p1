@@ -967,9 +967,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [i _clk_switch
 -> -> 0 `i `uc
 ]
-[v F12407 `Cuc ~T0 @X0 -> 5 `i t ]
-"12
-[v _font5x8 `F12407 ~T0 @X0 -> 11 `i e ]
+"11
+[v _rotacion_pendiente `Vuc ~T0 @X0 1 s ]
+[i _rotacion_pendiente
+-> -> 0 `i `uc
+]
+[v F12408 `Cuc ~T0 @X0 -> 5 `i t ]
+"13
+[v _font5x8 `F12408 ~T0 @X0 -> 11 `i e ]
 [i _font5x8
 :U ..
 :U ..
@@ -980,32 +985,32 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 0 `i `uc
 ..
 :U ..
--> -> 127 `i `uc
--> -> 8 `i `uc
--> -> 8 `i `uc
--> -> 8 `i `uc
--> -> 127 `i `uc
+-> -> 255 `i `uc
+-> -> 24 `i `uc
+-> -> 24 `i `uc
+-> -> 24 `i `uc
+-> -> 255 `i `uc
 ..
 :U ..
--> -> 62 `i `uc
--> -> 65 `i `uc
--> -> 65 `i `uc
--> -> 65 `i `uc
--> -> 62 `i `uc
+-> -> 126 `i `uc
+-> -> 129 `i `uc
+-> -> 129 `i `uc
+-> -> 129 `i `uc
+-> -> 126 `i `uc
 ..
 :U ..
--> -> 127 `i `uc
--> -> 64 `i `uc
--> -> 64 `i `uc
--> -> 64 `i `uc
--> -> 64 `i `uc
+-> -> 255 `i `uc
+-> -> 128 `i `uc
+-> -> 128 `i `uc
+-> -> 128 `i `uc
+-> -> 128 `i `uc
 ..
 :U ..
--> -> 127 `i `uc
--> -> 9 `i `uc
--> -> 9 `i `uc
--> -> 9 `i `uc
--> -> 127 `i `uc
+-> -> 254 `i `uc
+-> -> 145 `i `uc
+-> -> 145 `i `uc
+-> -> 145 `i `uc
+-> -> 254 `i `uc
 ..
 :U ..
 -> -> 0 `i `uc
@@ -1015,44 +1020,44 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 0 `i `uc
 ..
 :U ..
--> -> 127 `i `uc
--> -> 2 `i `uc
--> -> 4 `i `uc
--> -> 2 `i `uc
--> -> 127 `i `uc
+-> -> 255 `i `uc
+-> -> 6 `i `uc
+-> -> 24 `i `uc
+-> -> 6 `i `uc
+-> -> 255 `i `uc
 ..
 :U ..
 -> -> 127 `i `uc
--> -> 1 `i `uc
--> -> 1 `i `uc
--> -> 1 `i `uc
+-> -> 128 `i `uc
+-> -> 128 `i `uc
+-> -> 128 `i `uc
 -> -> 127 `i `uc
 ..
 :U ..
--> -> 127 `i `uc
--> -> 4 `i `uc
--> -> 8 `i `uc
--> -> 16 `i `uc
--> -> 127 `i `uc
+-> -> 255 `i `uc
+-> -> 6 `i `uc
+-> -> 24 `i `uc
+-> -> 96 `i `uc
+-> -> 255 `i `uc
 ..
 :U ..
--> -> 127 `i `uc
--> -> 65 `i `uc
--> -> 65 `i `uc
--> -> 34 `i `uc
--> -> 28 `i `uc
+-> -> 255 `i `uc
+-> -> 129 `i `uc
+-> -> 129 `i `uc
+-> -> 102 `i `uc
+-> -> 60 `i `uc
 ..
 :U ..
--> -> 62 `i `uc
--> -> 65 `i `uc
--> -> 65 `i `uc
--> -> 65 `i `uc
--> -> 62 `i `uc
+-> -> 126 `i `uc
+-> -> 129 `i `uc
+-> -> 129 `i `uc
+-> -> 129 `i `uc
+-> -> 126 `i `uc
 ..
 ..
 ]
-"27
-[v _mensaje `Cuc ~T0 @X0 -> 13 `i e ]
+"28
+[v _mensaje `Cuc ~T0 @X0 -> 12 `i e ]
 [i _mensaje
 :U ..
 -> -> 0 `i `uc
@@ -1060,7 +1065,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 2 `i `uc
 -> -> 3 `i `uc
 -> -> 4 `i `uc
--> -> 0 `i `uc
 -> -> 5 `i `uc
 -> -> 6 `i `uc
 -> -> 7 `i `uc
@@ -1070,22 +1074,22 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 0 `i `uc
 ..
 ]
-"32
-[v _buffer `uc ~T0 @X0 -> 65 `i e ]
+"33
+[v _buffer `uc ~T0 @X0 -> 71 `i e ]
 [i _buffer
 :U ..
 -> -> 0 `i `uc
 ..
 ]
-"34
+"35
 [v _generar_buffer_mensaje `(v ~T0 @X0 1 ef ]
 {
 [e :U _generar_buffer_mensaje ]
 [f ]
-"35
+"36
 [v _idx `uc ~T0 @X0 1 a ]
 [e = _idx -> -> 0 `i `uc ]
-"36
+"37
 {
 [v _l `uc ~T0 @X0 1 a ]
 [e = _l -> -> 0 `i `uc ]
@@ -1093,7 +1097,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $U 1552  ]
 [e :U 1551 ]
 {
-"37
+"38
 {
 [v _c `uc ~T0 @X0 1 a ]
 [e = _c -> -> 0 `i `uc ]
@@ -1101,129 +1105,178 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $U 1555  ]
 [e :U 1554 ]
 {
-"38
-[e = *U + &U _buffer * -> ++ _idx -> -> 1 `i `uc `ux -> -> # *U &U _buffer `ui `ux *U + &U *U + &U _font5x8 * -> *U + &U _mensaje * -> _l `ux -> -> # *U &U _mensaje `ui `ux `ux -> * -> # *U &U *U &U _font5x8 `ui -> -> 5 `i `ui `ux * -> _c `ux -> -> # *U &U *U + &U _font5x8 * -> *U + &U _mensaje * -> _l `ux -> -> # *U &U _mensaje `ui `ux `ux -> * -> # *U &U *U &U _font5x8 `ui -> -> 5 `i `ui `ux `ui `ux ]
 "39
+[e = *U + &U _buffer * -> ++ _idx -> -> 1 `i `uc `ux -> -> # *U &U _buffer `ui `ux -> ^ -> *U + &U *U + &U _font5x8 * -> *U + &U _mensaje * -> _l `ux -> -> # *U &U _mensaje `ui `ux `ux -> * -> # *U &U *U &U _font5x8 `ui -> -> 5 `i `ui `ux * -> _c `ux -> -> # *U &U *U + &U _font5x8 * -> *U + &U _mensaje * -> _l `ux -> -> # *U &U _mensaje `ui `ux `ux -> * -> # *U &U *U &U _font5x8 `ui -> -> 5 `i `ui `ux `ui `ux `i -> 255 `i `uc ]
+"40
 }
 [e ++ _c -> -> 1 `i `uc ]
 [e $ < -> _c `i -> 5 `i 1554  ]
 [e :U 1555 ]
 }
-"40
+"41
+[e $ ! < -> + -> _l `i -> 1 `i `ui / -> # _mensaje `ui -> # *U + &U _mensaje * -> -> -> 0 `i `ui `ux -> -> # *U &U _mensaje `ui `ux `ui 1557  ]
+{
+"42
+[e = *U + &U _buffer * -> ++ _idx -> -> 1 `i `uc `ux -> -> # *U &U _buffer `ui `ux -> -> 255 `i `uc ]
+"43
+}
+[e :U 1557 ]
+"44
 }
 [e ++ _l -> -> 1 `i `uc ]
 [e $ < -> _l `ui / -> # _mensaje `ui -> # *U + &U _mensaje * -> -> -> 0 `i `ui `ux -> -> # *U &U _mensaje `ui `ux `ui 1551  ]
 [e :U 1552 ]
 }
-"41
+"45
 [e :UE 1550 ]
 }
-"44
+"47
+[v _desplazar_buffer `(v ~T0 @X0 1 sf ]
+{
+[e :U _desplazar_buffer ]
+[f ]
+"48
+[v _primera_columna `uc ~T0 @X0 1 a ]
+[e = _primera_columna *U + &U _buffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _buffer `ui `ux ]
+"49
+{
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `ui - - + * / -> # _mensaje `ui -> # *U + &U _mensaje * -> -> -> 0 `i `ui `ux -> -> # *U &U _mensaje `ui `ux `ui -> -> 5 `i `ui / -> # _mensaje `ui -> # *U + &U _mensaje * -> -> -> 0 `i `ui `ux -> -> # *U &U _mensaje `ui `ux `ui -> -> 1 `i `ui -> -> 1 `i `ui 1559  ]
+[e $U 1560  ]
+[e :U 1559 ]
+{
+"50
+[e = *U + &U _buffer * -> _i `ux -> -> # *U &U _buffer `ui `ux *U + &U _buffer * -> -> + -> _i `i -> 1 `i `ui `ux -> -> # *U &U _buffer `ui `ux ]
+"51
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `ui - - + * / -> # _mensaje `ui -> # *U + &U _mensaje * -> -> -> 0 `i `ui `ux -> -> # *U &U _mensaje `ui `ux `ui -> -> 5 `i `ui / -> # _mensaje `ui -> # *U + &U _mensaje * -> -> -> 0 `i `ui `ux -> -> # *U &U _mensaje `ui `ux `ui -> -> 1 `i `ui -> -> 1 `i `ui 1559  ]
+[e :U 1560 ]
+}
+"52
+[e = *U + &U _buffer * -> - - + * / -> # _mensaje `ui -> # *U + &U _mensaje * -> -> -> 0 `i `ui `ux -> -> # *U &U _mensaje `ui `ux `ui -> -> 5 `i `ui / -> # _mensaje `ui -> # *U + &U _mensaje * -> -> -> 0 `i `ui `ux -> -> # *U &U _mensaje `ui `ux `ui -> -> 1 `i `ui -> -> 1 `i `ui `ux -> -> # *U &U _buffer `ui `ux _primera_columna ]
+"53
+[e :UE 1558 ]
+}
+"56
 [v _TMR0_CustomISR `(v ~T0 @X0 1 ef ]
 {
 [e :U _TMR0_CustomISR ]
 [f ]
-"47
-[e $ ! == -> _clk_switch `i -> 0 `i 1558  ]
+"59
+[e $ ! == -> _clk_switch `i -> 0 `i 1563  ]
 {
-"48
-[e :U 1561 ]
+"60
+[e :U 1566 ]
 {
 [e = . . _LATCbits 0 1 -> -> 1 `i `uc ]
 }
-[e :U 1560 ]
-"49
-[e $ ! == -> _bit_corrimiento `i -> 0 `i 1562  ]
-"50
 [e :U 1565 ]
+"61
+[e $ ! == -> _bit_corrimiento `i -> 0 `i 1567  ]
+"62
+[e :U 1570 ]
 {
 [e = . . _LATCbits 0 0 -> -> 1 `i `uc ]
 }
-[e :U 1564 ]
-[e $U 1566  ]
-"51
-[e :U 1562 ]
-"52
 [e :U 1569 ]
+[e $U 1571  ]
+"63
+[e :U 1567 ]
+"64
+[e :U 1574 ]
 {
 [e = . . _LATCbits 0 0 -> -> 0 `i `uc ]
 }
-[e :U 1568 ]
-[e :U 1566 ]
-"53
-[e = _clk_switch -> -> 1 `i `uc ]
-"55
-}
-[e $U 1570  ]
-[e :U 1558 ]
-{
-"56
 [e :U 1573 ]
+[e :U 1571 ]
+"65
+[e = _clk_switch -> -> 1 `i `uc ]
+"67
+}
+[e $U 1575  ]
+[e :U 1563 ]
+{
+"68
+[e :U 1578 ]
 {
 [e = . . _LATCbits 0 1 -> -> 0 `i `uc ]
 }
-[e :U 1572 ]
-"57
+[e :U 1577 ]
+"69
 [e ++ _bit_corrimiento -> -> 1 `i `Vuc ]
-"58
-[e $ ! >= -> _bit_corrimiento `i -> 25 `i 1574  ]
+"70
+[e $ ! >= -> _bit_corrimiento `i -> 25 `i 1579  ]
 {
-"59
+"71
 [e = _bit_corrimiento -> -> 0 `i `uc ]
-"60
+"72
+[e = _rotacion_pendiente -> -> 1 `i `uc ]
+"73
 }
-[e :U 1574 ]
-"61
+[e :U 1579 ]
+"74
 [e = _clk_switch -> -> 0 `i `uc ]
-"62
-}
-[e :U 1570 ]
-"63
-[e ++ _columna_actual -> -> 1 `i `Vuc ]
-"64
-[e $ ! >= -> _columna_actual `ui * / -> # _mensaje `ui -> # *U + &U _mensaje * -> -> -> 0 `i `ui `ux -> -> # *U &U _mensaje `ui `ux `ui -> -> 5 `i `ui 1575  ]
-{
-"65
-[e = _columna_actual -> -> 0 `i `uc ]
-"66
+"75
 }
 [e :U 1575 ]
-"67
-[e :UE 1557 ]
+"76
+[e ++ _columna_actual -> -> 1 `i `Vuc ]
+"77
+[e $ ! >= -> _columna_actual `ui - + * / -> # _mensaje `ui -> # *U + &U _mensaje * -> -> -> 0 `i `ui `ux -> -> # *U &U _mensaje `ui `ux `ui -> -> 5 `i `ui / -> # _mensaje `ui -> # *U + &U _mensaje * -> -> -> 0 `i `ui `ux -> -> # *U &U _mensaje `ui `ux `ui -> -> 1 `i `ui 1580  ]
+{
+"78
+[e = _columna_actual -> -> 0 `i `uc ]
+"79
+}
+[e :U 1580 ]
+"80
+[e :UE 1562 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"69
+"82
 [v _main `(i ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"70
+"83
 [e ( _SYSTEM_Initialize ..  ]
-"71
-[e ( _hc164_init ..  ]
-"72
-[e ( _generar_buffer_mensaje ..  ]
-"74
-[e ( _TMR0_OverflowCallbackRegister (1 &U _TMR0_CustomISR ]
-"75
-[e ( _TMR0_TMRInterruptEnable ..  ]
-"76
-[e = . . _INTCONbits 1 6 -> -> 1 `i `uc ]
-"77
-[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
-"79
-[e :U 1578 ]
-{
-"81
-[e $ ! == -> _clk_switch `i -> 0 `i 1580  ]
-"82
-[e = _LATB *U + &U _buffer * -> _bit_corrimiento `ux -> -> # *U &U _buffer `ui `ux ]
-[e :U 1580 ]
 "84
-}
-[e :U 1577 ]
-[e $U 1578  ]
-[e :U 1579 ]
+[e ( _hc164_init ..  ]
 "85
-[e :UE 1576 ]
+[e ( _generar_buffer_mensaje ..  ]
+"87
+[e ( _TMR0_OverflowCallbackRegister (1 &U _TMR0_CustomISR ]
+"88
+[e ( _TMR0_TMRInterruptEnable ..  ]
+"89
+[e = . . _INTCONbits 1 6 -> -> 1 `i `uc ]
+"90
+[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
+"92
+[e :U 1583 ]
+{
+"93
+[e $ ! != -> _rotacion_pendiente `i -> 0 `i 1585  ]
+{
+"94
+[e = _rotacion_pendiente -> -> 0 `i `uc ]
+"95
+[e ( _desplazar_buffer ..  ]
+"96
+}
+[e :U 1585 ]
+"98
+[e $ ! == -> _clk_switch `i -> 0 `i 1586  ]
+"99
+[e = _LATB *U + &U _buffer * -> _bit_corrimiento `ux -> -> # *U &U _buffer `ui `ux ]
+[e :U 1586 ]
+"101
+}
+[e :U 1582 ]
+[e $U 1583  ]
+[e :U 1584 ]
+"102
+[e :UE 1581 ]
 }

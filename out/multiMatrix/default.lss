@@ -4,514 +4,595 @@ default.elf:	file format elf32-pic
 Sections:
 Idx Name                       Size     VMA      Type
   0                            00000000 00000000 
-  1 text2                      00000240 00001046 TEXT
-  2 reset_vec                  00000004 00000000 DATA
-  3 intcode                    00000044 00000008 TEXT
-  4 init                       00000004 0000004c DATA
-  5 smallconst                 00000046 00001000 DATA
-  6 bssCOMRAM                  00000057 00000002 BSS
-  7 dabs$0                     00000001 00000001 BSS
-  8 _stray_data_0_             0000000e 00300000 DATA
-  9 .strtab                    00000a2e 00000000 
- 10 .symtab                    00000a10 00000000 
- 11 .debug_abbrev              00000118 00000000 DEBUG
- 12 .debug_info                000022ce 00000000 DEBUG
- 13 .debug_line                0000107c 00000000 DEBUG
- 14 .debug_ranges              00000070 00000000 DEBUG
- 15 .debug_pubnames            000003b7 00000000 DEBUG
- 16 .debug_aranges             00000420 00000000 DEBUG
- 17 .note.microchip.deviceinfo 00000024 00000000 
- 18 .shstrtab                  000000d1 00000000 
+  1 text2                      000002c2 00001046 TEXT
+  2 cstackBANK0                00000003 00000060 BSS
+  3 reset_vec                  00000004 00000000 DATA
+  4 intcode                    00000044 00000008 TEXT
+  5 init                       00000004 0000004c DATA
+  6 smallconst$0               00000045 00001000 DATA
+  7 bssCOMRAM                  0000005b 00000002 BSS
+  8 dabs$0                     00000001 00000001 BSS
+  9 _stray_data_0_             0000000e 00300000 DATA
+ 10 .strtab                    00000abb 00000000 
+ 11 .symtab                    00000a80 00000000 
+ 12 .debug_abbrev              0000012b 00000000 DEBUG
+ 13 .debug_info                0000233f 00000000 DEBUG
+ 14 .debug_line                00001091 00000000 DEBUG
+ 15 .debug_ranges              00000080 00000000 DEBUG
+ 16 .debug_pubnames            000003b7 00000000 DEBUG
+ 17 .debug_aranges             00000428 00000000 DEBUG
+ 18 .note.microchip.deviceinfo 00000024 00000000 
+ 19 .shstrtab                  000000df 00000000 
 
 Disassembly of section text2:
 
 00001046 <_generar_buffer_mensaje>:
 ; __ptext2():
-; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c:35
-;     uint8_t idx=0;
-    1046: 56 6a        	clrf	0x56, a
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c:36
-;     for(uint8_t l=0; l<LETRAS; l++) {
-    1048: 57 6a        	clrf	0x57, a
+;     uint8_t idx=0;
+    1046: 00 01        	movlb	0x0
+    1048: 60 6b        	clrf	0x60, b
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c:37
-;         for(uint8_t c=0; c<5; c++) {
-    104a: 58 6a        	clrf	0x58, a
+;     for(uint8_t l=0; l<LETRAS; l++) {
+    104a: 62 6b        	clrf	0x62, b
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c:38
-;             buffer[idx++] = font5x8[mensaje[l]][c];
-    104c: 57 50        	movf	0x57, w, a
-    104e: 38 0f        	addlw	0x38
-    1050: 54 6e        	movwf	0x54, a
-    1052: 54 c0 f6 ff  	movff	0x54, 0xff6
-    1056: 10 0e        	movlw	0x10
-    1058: f7 6e        	movwf	0xf7, a
-    105a: 08 00        	tblrd	*
-    105c: f5 50        	movf	0xf5, w, a
-    105e: 05 0d        	mullw	0x5
-    1060: f3 50        	movf	0xf3, w, a
-    1062: 01 0f        	addlw	0x1
-    1064: 58 24        	addwf	0x58, w, a
-    1066: 55 6e        	movwf	0x55, a
-    1068: 55 c0 f6 ff  	movff	0x55, 0xff6
-    106c: 10 0e        	movlw	0x10
-    106e: f7 6e        	movwf	0xf7, a
-    1070: 56 50        	movf	0x56, w, a
-    1072: 02 0f        	addlw	0x2
-    1074: d9 6e        	movwf	0xd9, a
-    1076: da 6a        	clrf	0xda, a
-    1078: 08 00        	tblrd	*
-    107a: f5 cf df ff  	movff	0xff5, 0xfdf
-    107e: 56 2a        	incf	0x56, f, a
+;         for(uint8_t c=0; c<5; c++) {
+    104c: 61 6b        	clrf	0x61, b
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c:39
-;         }
-    1080: 58 2a        	incf	0x58, f, a
-    1082: 04 0e        	movlw	0x4
-    1084: 58 64        	cpfsgt	0x58, a
-    1086: 47 ef 08 f0  	goto	0x108e
-    108a: 49 ef 08 f0  	goto	0x1092
-    108e: 26 ef 08 f0  	goto	0x104c
+;             buffer[idx++] = (uint8_t)(font5x8[mensaje[l]][c] ^ 0xFF);
+    104e: 60 51        	movf	0x60, w, b
+    1050: 02 0f        	addlw	0x2
+    1052: d9 6e        	movwf	0xd9, a
+    1054: da 6a        	clrf	0xda, a
+    1056: 62 51        	movf	0x62, w, b
+    1058: 38 0f        	addlw	0x38
+    105a: 5b 6e        	movwf	0x5b, a
+    105c: 5b c0 f6 ff  	movff	0x5b, 0xff6
+    1060: 10 0e        	movlw	0x10
+    1062: f7 6e        	movwf	0xf7, a
+    1064: 08 00        	tblrd	*
+    1066: f5 50        	movf	0xf5, w, a
+    1068: 05 0d        	mullw	0x5
+    106a: f3 50        	movf	0xf3, w, a
+    106c: 01 0f        	addlw	0x1
+    106e: 61 25        	addwf	0x61, w, b
+    1070: 5c 6e        	movwf	0x5c, a
+    1072: 5c c0 f6 ff  	movff	0x5c, 0xff6
+    1076: 10 0e        	movlw	0x10
+    1078: f7 6e        	movwf	0xf7, a
+    107a: 08 00        	tblrd	*
+    107c: f5 50        	movf	0xf5, w, a
+    107e: ff 0a        	xorlw	0xff
+    1080: df 6e        	movwf	0xdf, a
+    1082: 60 2b        	incf	0x60, f, b
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c:40
-;     }
-    1092: 57 2a        	incf	0x57, f, a
-    1094: 0c 0e        	movlw	0xc
-    1096: 57 64        	cpfsgt	0x57, a
-    1098: 50 ef 08 f0  	goto	0x10a0
-    109c: 52 ef 08 f0  	goto	0x10a4
-    10a0: 25 ef 08 f0  	goto	0x104a
+;         }
+    1084: 61 2b        	incf	0x61, f, b
+    1086: 04 0e        	movlw	0x4
+    1088: 61 65        	cpfsgt	0x61, b
+    108a: 49 ef 08 f0  	goto	0x1092
+    108e: 4b ef 08 f0  	goto	0x1096
+    1092: 27 ef 08 f0  	goto	0x104e
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c:41
-; }
-    10a4: 12 00        	return
-
-000010a6 <__ptext16>:
-; _TMR0_CustomISR():
-; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c:47
-;     if (clk_switch == 0) {
-    10a6: 45 50        	movf	0x45, w, a
-    10a8: d8 a4        	btfss	0xd8, 0x2, a
-    10aa: 59 ef 08 f0  	goto	0x10b2
+;         if(l + 1 < LETRAS) {
+    1096: 62 51        	movf	0x62, w, b
+    1098: 5b 6e        	movwf	0x5b, a
+    109a: 5c 6a        	clrf	0x5c, a
+    109c: 01 0e        	movlw	0x1
+    109e: 5b 26        	addwf	0x5b, f, a
+    10a0: 00 0e        	movlw	0x0
+    10a2: 5c 22        	addwfc	0x5c, f, a
+    10a4: 5c 50        	movf	0x5c, w, a
+    10a6: 07 e1        	bnz	0x10b6
+    10a8: 0c 0e        	movlw	0xc
+    10aa: 5b 5c        	subwf	0x5b, w, a
+    10ac: d8 b0        	btfsc	0xd8, 0x0, a
     10ae: 5b ef 08 f0  	goto	0x10b6
-    10b2: 6c ef 08 f0  	goto	0x10d8
-; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c:48
-;         CLK_SetHigh();
-    10b6: 8b 82        	bsf	0x8b, 0x1, a
-; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c:49
-;         if(bit_corrimiento ==0)
-    10b8: 46 50        	movf	0x46, w, a
-    10ba: d8 a4        	btfss	0xd8, 0x2, a
-    10bc: 62 ef 08 f0  	goto	0x10c4
-    10c0: 64 ef 08 f0  	goto	0x10c8
-    10c4: 67 ef 08 f0  	goto	0x10ce
-; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c:50
-;             AB_SetHigh(); // Enviar el bit actual
-    10c8: 8b 80        	bsf	0x8b, 0x0, a
-    10ca: 68 ef 08 f0  	goto	0x10d0
-; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c:52
-;             AB_SetLow(); // Enviar el bit actual
-    10ce: 8b 90        	bcf	0x8b, 0x0, a
-; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c:53
-;         clk_switch = 1;
-    10d0: 01 0e        	movlw	0x1
-    10d2: 45 6e        	movwf	0x45, a
-; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c:55
-;     } else {
-    10d4: 78 ef 08 f0  	goto	0x10f0
-; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c:56
-;         CLK_SetLow();
-    10d8: 8b 92        	bcf	0x8b, 0x1, a
-; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c:57
-;         bit_corrimiento++;
-    10da: 46 2a        	incf	0x46, f, a
-; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c:58
-;         if(bit_corrimiento >= 25) {
-    10dc: 18 0e        	movlw	0x18
-    10de: 46 64        	cpfsgt	0x46, a
+    10b2: 5d ef 08 f0  	goto	0x10ba
+    10b6: 64 ef 08 f0  	goto	0x10c8
+; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c:42
+;             buffer[idx++] = 0xFF;
+    10ba: 60 51        	movf	0x60, w, b
+    10bc: 02 0f        	addlw	0x2
+    10be: d9 6e        	movwf	0xd9, a
+    10c0: da 6a        	clrf	0xda, a
+    10c2: ff 0e        	movlw	0xff
+    10c4: df 6e        	movwf	0xdf, a
+    10c6: 60 2b        	incf	0x60, f, b
+; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c:44
+;     }
+    10c8: 62 2b        	incf	0x62, f, b
+    10ca: 0b 0e        	movlw	0xb
+    10cc: 62 65        	cpfsgt	0x62, b
+    10ce: 6b ef 08 f0  	goto	0x10d6
+    10d2: 6d ef 08 f0  	goto	0x10da
+    10d6: 26 ef 08 f0  	goto	0x104c
+; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c:45
+; }
+    10da: 12 00        	return
+
+000010dc <__ptext17>:
+; _TMR0_CustomISR():
+; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c:59
+;     if (clk_switch == 0) {
+    10dc: 4c 50        	movf	0x4c, w, a
+    10de: d8 a4        	btfss	0xd8, 0x2, a
     10e0: 74 ef 08 f0  	goto	0x10e8
     10e4: 76 ef 08 f0  	goto	0x10ec
-    10e8: 77 ef 08 f0  	goto	0x10ee
-; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c:59
-;             bit_corrimiento = 0; // Reinicia el corrimiento
-    10ec: 46 6a        	clrf	0x46, a
+    10e8: 87 ef 08 f0  	goto	0x110e
+; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c:60
+;         CLK_SetHigh();
+    10ec: 8b 82        	bsf	0x8b, 0x1, a
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c:61
-;         clk_switch = 0;
-    10ee: 45 6a        	clrf	0x45, a
-; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c:63
-;     columna_actual++;
-    10f0: 47 2a        	incf	0x47, f, a
-; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c:64
-;     if(columna_actual >= COLS_TOTAL) {
-    10f2: 40 0e        	movlw	0x40
-    10f4: 47 64        	cpfsgt	0x47, a
+;         if(bit_corrimiento ==0)
+    10ee: 4d 50        	movf	0x4d, w, a
+    10f0: d8 a4        	btfss	0xd8, 0x2, a
+    10f2: 7d ef 08 f0  	goto	0x10fa
     10f6: 7f ef 08 f0  	goto	0x10fe
-    10fa: 81 ef 08 f0  	goto	0x1102
-    10fe: 82 ef 08 f0  	goto	0x1104
+    10fa: 82 ef 08 f0  	goto	0x1104
+; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c:62
+;             AB_SetHigh(); // Enviar el bit actual
+    10fe: 8b 80        	bsf	0x8b, 0x0, a
+    1100: 83 ef 08 f0  	goto	0x1106
+; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c:64
+;             AB_SetLow(); // Enviar el bit actual
+    1104: 8b 90        	bcf	0x8b, 0x0, a
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c:65
-;         columna_actual = 0; // Reinicia la columna
-    1102: 47 6a        	clrf	0x47, a
+;         clk_switch = 1;
+    1106: 01 0e        	movlw	0x1
+    1108: 4c 6e        	movwf	0x4c, a
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c:67
-; }
-    1104: 12 00        	return
-
-00001106 <_main>:
-; __end_of_TMR0_CustomISR():
+;     } else {
+    110a: 95 ef 08 f0  	goto	0x112a
+; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c:68
+;         CLK_SetLow();
+    110e: 8b 92        	bcf	0x8b, 0x1, a
+; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c:69
+;         bit_corrimiento++;
+    1110: 4d 2a        	incf	0x4d, f, a
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c:70
-;     SYSTEM_Initialize();
-    1106: 11 ec 09 f0  	call	0x1222
+;         if(bit_corrimiento >= 25) {
+    1112: 18 0e        	movlw	0x18
+    1114: 4d 64        	cpfsgt	0x4d, a
+    1116: 8f ef 08 f0  	goto	0x111e
+    111a: 91 ef 08 f0  	goto	0x1122
+    111e: 94 ef 08 f0  	goto	0x1128
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c:71
-;     hc164_init();
-    110a: 1a ec 09 f0  	call	0x1234
+;             bit_corrimiento = 0; // Reinicia el corrimiento
+    1122: 4d 6a        	clrf	0x4d, a
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c:72
-;     generar_buffer_mensaje();
-    110e: 23 ec 08 f0  	call	0x1046
+;             rotacion_pendiente = 1;
+    1124: 01 0e        	movlw	0x1
+    1126: 4b 6e        	movwf	0x4b, a
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c:74
-;     TMR0_OverflowCallbackRegister(TMR0_CustomISR);
-    1112: a6 0e        	movlw	0xa6
-    1114: 54 6e        	movwf	0x54, a
-    1116: 10 0e        	movlw	0x10
-    1118: 55 6e        	movwf	0x55, a
-    111a: 27 ec 09 f0  	call	0x124e
-; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c:75
-;     TMR0_TMRInterruptEnable();
-    111e: 40 ec 09 f0  	call	0x1280
+;         clk_switch = 0;
+    1128: 4c 6a        	clrf	0x4c, a
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c:76
-;     INTCONbits.PEIE = 1;
-    1122: f2 8c        	bsf	0xf2, 0x6, a
+;     columna_actual++;
+    112a: 4e 2a        	incf	0x4e, f, a
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c:77
-;     INTCONbits.GIE = 1;
-    1124: f2 8e        	bsf	0xf2, 0x7, a
-; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c:81
-;         if(clk_switch == 0)
-    1126: 45 50        	movf	0x45, w, a
-    1128: d8 a4        	btfss	0xd8, 0x2, a
-    112a: 99 ef 08 f0  	goto	0x1132
-    112e: 9b ef 08 f0  	goto	0x1136
-    1132: 93 ef 08 f0  	goto	0x1126
-; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c:82
-;             LATB = buffer[bit_corrimiento]; // Para debug, ver la columna actual en PORTB
-    1136: 46 50        	movf	0x46, w, a
-    1138: 02 0f        	addlw	0x2
-    113a: d9 6e        	movwf	0xd9, a
-    113c: da 6a        	clrf	0xda, a
-    113e: df 50        	movf	0xdf, w, a
-    1140: 8a 6e        	movwf	0x8a, a
-    1142: 93 ef 08 f0  	goto	0x1126
-    1146: 26 ef 00 f0  	goto	0x4c
+;     if(columna_actual >= COLS_TOTAL) {
+    112c: 46 0e        	movlw	0x46
+    112e: 4e 64        	cpfsgt	0x4e, a
+    1130: 9c ef 08 f0  	goto	0x1138
+    1134: 9e ef 08 f0  	goto	0x113c
+    1138: 9f ef 08 f0  	goto	0x113e
+; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c:78
+;         columna_actual = 0; // Reinicia la columna
+    113c: 4e 6a        	clrf	0x4e, a
+; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c:80
+; }
+    113e: 12 00        	return
 
-0000114a <__ptext8>:
+00001140 <_main>:
+; __end_of_TMR0_CustomISR():
+; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c:83
+;     SYSTEM_Initialize();
+    1140: 52 ec 09 f0  	call	0x12a4
+; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c:84
+;     hc164_init();
+    1144: 5b ec 09 f0  	call	0x12b6
+; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c:85
+;     generar_buffer_mensaje();
+    1148: 23 ec 08 f0  	call	0x1046
+; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c:87
+;     TMR0_OverflowCallbackRegister(TMR0_CustomISR);
+    114c: dc 0e        	movlw	0xdc
+    114e: 5b 6e        	movwf	0x5b, a
+    1150: 10 0e        	movlw	0x10
+    1152: 5c 6e        	movwf	0x5c, a
+    1154: 68 ec 09 f0  	call	0x12d0
+; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c:88
+;     TMR0_TMRInterruptEnable();
+    1158: 81 ec 09 f0  	call	0x1302
+; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c:89
+;     INTCONbits.PEIE = 1;
+    115c: f2 8c        	bsf	0xf2, 0x6, a
+; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c:90
+;     INTCONbits.GIE = 1;
+    115e: f2 8e        	bsf	0xf2, 0x7, a
+; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c:93
+;         if(rotacion_pendiente != 0) {
+    1160: 4b 50        	movf	0x4b, w, a
+    1162: d8 b4        	btfsc	0xd8, 0x2, a
+    1164: b6 ef 08 f0  	goto	0x116c
+    1168: b8 ef 08 f0  	goto	0x1170
+    116c: bb ef 08 f0  	goto	0x1176
+; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c:94
+;             rotacion_pendiente = 0;
+    1170: 4b 6a        	clrf	0x4b, a
+; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c:95
+;             desplazar_buffer();
+    1172: 0a ec 09 f0  	call	0x1214
+; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c:98
+;         if(clk_switch == 0)
+    1176: 4c 50        	movf	0x4c, w, a
+    1178: d8 a4        	btfss	0xd8, 0x2, a
+    117a: c1 ef 08 f0  	goto	0x1182
+    117e: c3 ef 08 f0  	goto	0x1186
+    1182: b0 ef 08 f0  	goto	0x1160
+; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c:99
+;             LATB = buffer[bit_corrimiento]; // Para debug, ver la columna actual en PORTB
+    1186: 4d 50        	movf	0x4d, w, a
+    1188: 02 0f        	addlw	0x2
+    118a: d9 6e        	movwf	0xd9, a
+    118c: da 6a        	clrf	0xda, a
+    118e: df 50        	movf	0xdf, w, a
+    1190: 8a 6e        	movwf	0x8a, a
+    1192: b0 ef 08 f0  	goto	0x1160
+    1196: 26 ef 00 f0  	goto	0x4c
+
+0000119a <__ptext9>:
 ; __end_of_main():
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c:46
 ;     RCONbits.IPEN = 0;
-    114a: d0 9e        	bcf	0xd0, 0x7, a
+    119a: d0 9e        	bcf	0xd0, 0x7, a
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c:50
 ;     EXT_INT0_InterruptFlagClear();   
-    114c: f2 92        	bcf	0xf2, 0x1, a
+    119c: f2 92        	bcf	0xf2, 0x1, a
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c:51
 ;     EXT_INT0_risingEdgeSet();
-    114e: f1 8c        	bsf	0xf1, 0x6, a
+    119e: f1 8c        	bsf	0xf1, 0x6, a
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c:53
 ;     INT0_SetInterruptHandler(INT0_DefaultInterruptHandler);
-    1150: 00 0e        	movlw	0x0
-    1152: 54 6e        	movwf	0x54, a
-    1154: 00 0e        	movlw	0x0
-    1156: 55 6e        	movwf	0x55, a
-    1158: 3b ec 09 f0  	call	0x1276
+    11a0: 00 0e        	movlw	0x0
+    11a2: 5b 6e        	movwf	0x5b, a
+    11a4: 00 0e        	movlw	0x0
+    11a6: 5c 6e        	movwf	0x5c, a
+    11a8: 7c ec 09 f0  	call	0x12f8
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c:58
 ;     EXT_INT1_InterruptFlagClear();   
-    115c: f0 90        	bcf	0xf0, 0x0, a
+    11ac: f0 90        	bcf	0xf0, 0x0, a
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c:59
 ;     EXT_INT1_risingEdgeSet();
-    115e: f1 8a        	bsf	0xf1, 0x5, a
+    11ae: f1 8a        	bsf	0xf1, 0x5, a
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c:61
 ;     INT1_SetInterruptHandler(INT1_DefaultInterruptHandler);
-    1160: 00 0e        	movlw	0x0
-    1162: 54 6e        	movwf	0x54, a
-    1164: 00 0e        	movlw	0x0
-    1166: 55 6e        	movwf	0x55, a
-    1168: 36 ec 09 f0  	call	0x126c
+    11b0: 00 0e        	movlw	0x0
+    11b2: 5b 6e        	movwf	0x5b, a
+    11b4: 00 0e        	movlw	0x0
+    11b6: 5c 6e        	movwf	0x5c, a
+    11b8: 77 ec 09 f0  	call	0x12ee
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c:66
 ;     EXT_INT2_InterruptFlagClear();   
-    116c: f0 92        	bcf	0xf0, 0x1, a
+    11bc: f0 92        	bcf	0xf0, 0x1, a
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c:67
 ;     EXT_INT2_risingEdgeSet();
-    116e: f1 88        	bsf	0xf1, 0x4, a
+    11be: f1 88        	bsf	0xf1, 0x4, a
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c:69
 ;     INT2_SetInterruptHandler(INT2_DefaultInterruptHandler);
-    1170: 00 0e        	movlw	0x0
-    1172: 54 6e        	movwf	0x54, a
-    1174: 00 0e        	movlw	0x0
-    1176: 55 6e        	movwf	0x55, a
-    1178: 31 ec 09 f0  	call	0x1262
+    11c0: 00 0e        	movlw	0x0
+    11c2: 5b 6e        	movwf	0x5b, a
+    11c4: 00 0e        	movlw	0x0
+    11c6: 5c 6e        	movwf	0x5c, a
+    11c8: 72 ec 09 f0  	call	0x12e4
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c:74
 ;     EXT_INT3_InterruptFlagClear();   
-    117c: f0 94        	bcf	0xf0, 0x2, a
+    11cc: f0 94        	bcf	0xf0, 0x2, a
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c:75
 ;     EXT_INT3_risingEdgeSet();
-    117e: f1 86        	bsf	0xf1, 0x3, a
+    11ce: f1 86        	bsf	0xf1, 0x3, a
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c:77
 ;     INT3_SetInterruptHandler(INT3_DefaultInterruptHandler);
-    1180: 00 0e        	movlw	0x0
-    1182: 54 6e        	movwf	0x54, a
-    1184: 00 0e        	movlw	0x0
-    1186: 55 6e        	movwf	0x55, a
-    1188: 2c ec 09 f0  	call	0x1258
+    11d0: 00 0e        	movlw	0x0
+    11d2: 5b 6e        	movwf	0x5b, a
+    11d4: 00 0e        	movlw	0x0
+    11d6: 5c 6e        	movwf	0x5c, a
+    11d8: 6d ec 09 f0  	call	0x12da
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c:80
 ; }
-    118c: 12 00        	return
+    11dc: 12 00        	return
 
-0000118e <__ptext15>:
+000011de <__ptext16>:
 ; _TMR0_OverflowISR():
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c:144
 ;     TMR0H = (uint8_t)(tmr0PeriodCount >> 8);
-    118e: 44 50        	movf	0x44, w, a
-    1190: d7 6e        	movwf	0xd7, a
+    11de: 4a 50        	movf	0x4a, w, a
+    11e0: d7 6e        	movwf	0xd7, a
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c:145
 ;     TMR0L = (uint8_t)(tmr0PeriodCount);
-    1192: 43 c0 d6 ff  	movff	0x43, 0xfd6
+    11e2: 49 c0 d6 ff  	movff	0x49, 0xfd6
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c:147
 ;     if(NULL != TMR0_OverflowCallback)
-    1196: 48 50        	movf	0x48, w, a
-    1198: 49 10        	iorwf	0x49, w, a
-    119a: d8 b4        	btfsc	0xd8, 0x2, a
-    119c: d2 ef 08 f0  	goto	0x11a4
-    11a0: d4 ef 08 f0  	goto	0x11a8
-    11a4: e0 ef 08 f0  	goto	0x11c0
+    11e6: 4f 50        	movf	0x4f, w, a
+    11e8: 50 10        	iorwf	0x50, w, a
+    11ea: d8 b4        	btfsc	0xd8, 0x2, a
+    11ec: fa ef 08 f0  	goto	0x11f4
+    11f0: fc ef 08 f0  	goto	0x11f8
+    11f4: 08 ef 09 f0  	goto	0x1210
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c:149
 ;         TMR0_OverflowCallback();
-    11a8: 02 d8        	rcall	0x11ae
-    11aa: e0 ef 08 f0  	goto	0x11c0
-    11ae: 05 00        	push
-    11b0: fa 6e        	movwf	0xfa, a
-    11b2: 48 50        	movf	0x48, w, a
-    11b4: fd 6e        	movwf	0xfd, a
-    11b6: 49 50        	movf	0x49, w, a
-    11b8: fe 6e        	movwf	0xfe, a
-    11ba: ff 6a        	clrf	0xff, a
-    11bc: fa 50        	movf	0xfa, w, a
-    11be: 12 00        	return
+    11f8: 02 d8        	rcall	0x11fe
+    11fa: 08 ef 09 f0  	goto	0x1210
+    11fe: 05 00        	push
+    1200: fa 6e        	movwf	0xfa, a
+    1202: 4f 50        	movf	0x4f, w, a
+    1204: fd 6e        	movwf	0xfd, a
+    1206: 50 50        	movf	0x50, w, a
+    1208: fe 6e        	movwf	0xfe, a
+    120a: ff 6a        	clrf	0xff, a
+    120c: fa 50        	movf	0xfa, w, a
+    120e: 12 00        	return
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c:151
 ;     INTCONbits.TMR0IF = 0;
-    11c0: f2 94        	bcf	0xf2, 0x2, a
+    1210: f2 94        	bcf	0xf2, 0x2, a
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c:152
 ; }
-    11c2: 12 00        	return
+    1212: 12 00        	return
 
-000011c4 <__ptext5>:
-; __ptext5():
+00001214 <_desplazar_buffer>:
+; __ptext3():
+; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c:48
+;     uint8_t primera_columna = buffer[0];
+    1214: 02 c0 5b f0  	movff	0x2, 0x5b
+; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c:49
+;     for(uint8_t i=0; i<COLS_TOTAL-1; i++) {
+    1218: 5c 6a        	clrf	0x5c, a
+; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c:50
+;         buffer[i] = buffer[i+1];
+    121a: 5c 50        	movf	0x5c, w, a
+    121c: 03 0f        	addlw	0x3
+    121e: d9 6e        	movwf	0xd9, a
+    1220: da 6a        	clrf	0xda, a
+    1222: 5c 50        	movf	0x5c, w, a
+    1224: 02 0f        	addlw	0x2
+    1226: e1 6e        	movwf	0xe1, a
+    1228: e2 6a        	clrf	0xe2, a
+    122a: df cf e7 ff  	movff	0xfdf, 0xfe7
+; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c:51
+;     }
+    122e: 5c 2a        	incf	0x5c, f, a
+    1230: 45 0e        	movlw	0x45
+    1232: 5c 64        	cpfsgt	0x5c, a
+    1234: 1e ef 09 f0  	goto	0x123c
+    1238: 20 ef 09 f0  	goto	0x1240
+    123c: 0d ef 09 f0  	goto	0x121a
+; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c:52
+;     buffer[COLS_TOTAL-1] = primera_columna;
+    1240: 5b c0 48 f0  	movff	0x5b, 0x48
+; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c:53
+; }
+    1244: 12 00        	return
+
+00001246 <__ptext6>:
+; __ptext6():
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c:51
 ;     T0CONbits.T08BIT = 0;
-    11c4: d5 9c        	bcf	0xd5, 0x6, a
+    1246: d5 9c        	bcf	0xd5, 0x6, a
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c:52
 ;     TMR0H = 0xFE;         // Period 1ms; Frequency 500000Hz; Count 65036
-    11c6: fe 0e        	movlw	0xfe
-    11c8: d7 6e        	movwf	0xd7, a
+    1248: fe 0e        	movlw	0xfe
+    124a: d7 6e        	movwf	0xd7, a
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c:53
 ;     TMR0L = 0xC;
-    11ca: 0c 0e        	movlw	0xc
-    11cc: d6 6e        	movwf	0xd6, a
+    124c: 0c 0e        	movlw	0xc
+    124e: d6 6e        	movwf	0xd6, a
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c:54
 ;     tmr0PeriodCount = 65036U;
-    11ce: fe 0e        	movlw	0xfe
-    11d0: 44 6e        	movwf	0x44, a
-    11d2: 0c 0e        	movlw	0xc
-    11d4: 43 6e        	movwf	0x43, a
+    1250: fe 0e        	movlw	0xfe
+    1252: 4a 6e        	movwf	0x4a, a
+    1254: 0c 0e        	movlw	0xc
+    1256: 49 6e        	movwf	0x49, a
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c:55
 ;     TMR0_OverflowCallbackRegister(TMR0_DefaultOverflowCallback);
-    11d6: 84 0e        	movlw	0x84
-    11d8: 54 6e        	movwf	0x54, a
-    11da: 12 0e        	movlw	0x12
-    11dc: 55 6e        	movwf	0x55, a
-    11de: 27 ec 09 f0  	call	0x124e
+    1258: 06 0e        	movlw	0x6
+    125a: 5b 6e        	movwf	0x5b, a
+    125c: 13 0e        	movlw	0x13
+    125e: 5c 6e        	movwf	0x5c, a
+    1260: 68 ec 09 f0  	call	0x12d0
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c:57
 ;     INTCONbits.TMR0IF = 0;	   
-    11e2: f2 94        	bcf	0xf2, 0x2, a
+    1264: f2 94        	bcf	0xf2, 0x2, a
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c:58
 ;     INTCONbits.TMR0IE = 1;	
-    11e4: f2 8a        	bsf	0xf2, 0x5, a
+    1266: f2 8a        	bsf	0xf2, 0x5, a
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c:60
 ;     T0CON = (2 << _T0CON_T0PS_POSN)   // T0PS 1:8
-    11e6: 92 0e        	movlw	0x92
-    11e8: d5 6e        	movwf	0xd5, a
+    1268: 92 0e        	movlw	0x92
+    126a: d5 6e        	movwf	0xd5, a
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c:66
 ; }
-    11ea: 12 00        	return
+    126c: 12 00        	return
 
-000011ec <__ptext7>:
-; __ptext7():
+0000126e <__ptext8>:
+; __ptext8():
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/pins.c:43
 ;     LATA = 0x0;
-    11ec: 89 6a        	clrf	0x89, a
+    126e: 89 6a        	clrf	0x89, a
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/pins.c:44
 ;     LATB = 0x0;
-    11ee: 8a 6a        	clrf	0x8a, a
+    1270: 8a 6a        	clrf	0x8a, a
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/pins.c:45
 ;     LATC = 0x0;
-    11f0: 8b 6a        	clrf	0x8b, a
+    1272: 8b 6a        	clrf	0x8b, a
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/pins.c:53
 ;     TRISA = 0xEF;
-    11f2: ef 0e        	movlw	0xef
-    11f4: 92 6e        	movwf	0x92, a
+    1274: ef 0e        	movlw	0xef
+    1276: 92 6e        	movwf	0x92, a
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/pins.c:54
 ;     TRISB = 0x80;
-    11f6: 80 0e        	movlw	0x80
-    11f8: 93 6e        	movwf	0x93, a
+    1278: 80 0e        	movlw	0x80
+    127a: 93 6e        	movwf	0x93, a
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/pins.c:55
 ;     TRISC = 0xF8;
-    11fa: f8 0e        	movlw	0xf8
-    11fc: 94 6e        	movwf	0x94, a
+    127c: f8 0e        	movlw	0xf8
+    127e: 94 6e        	movwf	0x94, a
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/pins.c:64
 ;     WPUB = 0x0;
-    11fe: 0f 01        	movlb	0xf
-    1200: 5b 6b        	clrf	0x5b, b
+    1280: 0f 01        	movlb	0xf
+    1282: 5b 6b        	clrf	0x5b, b
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/pins.c:85
 ;     IOCB = 0x0;
-    1202: 5a 6b        	clrf	0x5a, b
+    1284: 5a 6b        	clrf	0x5a, b
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/pins.c:89
 ;     INTCONbits.RBIE = 1; 
-    1204: f2 86        	bsf	0xf2, 0x3, a
+    1286: f2 86        	bsf	0xf2, 0x3, a
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/pins.c:90
 ; }
-    1206: 12 00        	return
+    1288: 12 00        	return
 
-00001208 <start_initialization>:
+0000128a <start_initialization>:
 ; __initialization():
-    1208: 00 ee 02 f0  	lfsr	0x0, 0x2
-    120c: 46 0e        	movlw	0x46
-    120e: ee 6a        	clrf	0xee, a
-    1210: e8 06        	decf	0xe8, f, a
-    1212: fd e1        	bnz	0x140e
+    128a: 00 ee 02 f0  	lfsr	0x0, 0x2
+    128e: 4d 0e        	movlw	0x4d
+    1290: ee 6a        	clrf	0xee, a
+    1292: e8 06        	decf	0xe8, f, a
+    1294: fd e1        	bnz	0x1490
 
-00001214 <end_of_initialization>:
+00001296 <end_of_initialization>:
 ; __end_of__initialization():
-    1214: 01 90        	bcf	0x1, 0x0, a
-    1216: 01 92        	bcf	0x1, 0x1, a
-    1218: 00 0e        	movlw	0x0
-    121a: f8 6e        	movwf	0xf8, a
-    121c: 00 01        	movlb	0x0
-    121e: 83 ef 08 f0  	goto	0x1106
+    1296: 01 90        	bcf	0x1, 0x0, a
+    1298: 01 92        	bcf	0x1, 0x1, a
+    129a: 00 0e        	movlw	0x0
+    129c: f8 6e        	movwf	0xf8, a
+    129e: 00 01        	movlb	0x0
+    12a0: a0 ef 08 f0  	goto	0x1140
 
-00001222 <__ptext4>:
-; __ptext4():
+000012a4 <__ptext5>:
+; __ptext5():
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/system.c:41
 ;     CLOCK_Initialize();
-    1222: 21 ec 09 f0  	call	0x1242
+    12a4: 62 ec 09 f0  	call	0x12c4
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/system.c:42
 ;     PIN_MANAGER_Initialize();
-    1226: f6 ec 08 f0  	call	0x11ec
+    12a8: 37 ec 09 f0  	call	0x126e
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/system.c:43
 ;     TMR0_Initialize();
-    122a: e2 ec 08 f0  	call	0x11c4
+    12ac: 23 ec 09 f0  	call	0x1246
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/system.c:44
 ;     INTERRUPT_Initialize();
-    122e: a5 ec 08 f0  	call	0x114a
+    12b0: cd ec 08 f0  	call	0x119a
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/system.c:45
 ; }
-    1232: 12 00        	return
+    12b4: 12 00        	return
 
-00001234 <_hc164_init>:
+000012b6 <_hc164_init>:
 ; __ptext1():
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/hc164.c:6
 ;     AB_SetLow();      // Línea de datos a 0.
-    1234: 8b 90        	bcf	0x8b, 0x0, a
+    12b6: 8b 90        	bcf	0x8b, 0x0, a
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/hc164.c:7
 ;     CLK_SetLow();     // Reloj a 0.
-    1236: 8b 92        	bcf	0x8b, 0x1, a
+    12b8: 8b 92        	bcf	0x8b, 0x1, a
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/hc164.c:8
 ;     MR_SetHigh();     // Reset siempre en 1.
-    1238: 8b 84        	bsf	0x8b, 0x2, a
+    12ba: 8b 84        	bsf	0x8b, 0x2, a
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/hc164.c:9
 ;     AB_SetDigitalOutput();
-    123a: 94 90        	bcf	0x94, 0x0, a
+    12bc: 94 90        	bcf	0x94, 0x0, a
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/hc164.c:10
 ;     CLK_SetDigitalOutput();
-    123c: 94 92        	bcf	0x94, 0x1, a
+    12be: 94 92        	bcf	0x94, 0x1, a
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/hc164.c:11
 ;     MR_SetDigitalOutput();
-    123e: 94 94        	bcf	0x94, 0x2, a
+    12c0: 94 94        	bcf	0x94, 0x2, a
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/hc164.c:12
 ; }
-    1240: 12 00        	return
+    12c2: 12 00        	return
 
-00001242 <__ptext13>:
-; __ptext13():
+000012c4 <__ptext14>:
+; __ptext14():
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/clock.c:41
 ;     OSCCON = (0 << _OSCCON_SCS_POSN)   // SCS FOSC
-    1242: 70 0e        	movlw	0x70
-    1244: d3 6e        	movwf	0xd3, a
+    12c4: 70 0e        	movlw	0x70
+    12c6: d3 6e        	movwf	0xd3, a
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/clock.c:45
 ;     OSCCON2 = (0 << _OSCCON2_SOSCGO_POSN)   // SOSCGO disabled
-    1246: d2 6a        	clrf	0xd2, a
+    12c8: d2 6a        	clrf	0xd2, a
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/clock.c:48
 ;     OSCTUNE = (0 << _OSCTUNE_TUN_POSN)   // TUN 0x0
-    1248: 9b 6a        	clrf	0x9b, a
+    12ca: 9b 6a        	clrf	0x9b, a
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/clock.c:51
 ;     REFOCON = (0 << _REFOCON_ROON_POSN)   // ROON disabled
-    124a: 9a 6a        	clrf	0x9a, a
+    12cc: 9a 6a        	clrf	0x9a, a
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/clock.c:55
 ; }
-    124c: 12 00        	return
+    12ce: 12 00        	return
 
-0000124e <__ptext6>:
-; __ptext6():
+000012d0 <__ptext7>:
+; __ptext7():
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c:156
 ;     TMR0_OverflowCallback = callbackHandler;
-    124e: 54 c0 48 f0  	movff	0x54, 0x48
-    1252: 55 c0 49 f0  	movff	0x55, 0x49
+    12d0: 5b c0 4f f0  	movff	0x5b, 0x4f
+    12d4: 5c c0 50 f0  	movff	0x5c, 0x50
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c:157
 ; }
-    1256: 12 00        	return
+    12d8: 12 00        	return
 
-00001258 <__ptext9>:
+000012da <__ptext10>:
 ; __end_of_TMR0_OverflowCallbackRegister():
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c:198
 ;     INT3_InterruptHandler = InterruptHandler;
-    1258: 54 c0 4a f0  	movff	0x54, 0x4a
-    125c: 55 c0 4b f0  	movff	0x55, 0x4b
+    12da: 5b c0 51 f0  	movff	0x5b, 0x51
+    12de: 5c c0 52 f0  	movff	0x5c, 0x52
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c:199
 ; }
-    1260: 12 00        	return
+    12e2: 12 00        	return
 
-00001262 <__ptext10>:
+000012e4 <__ptext11>:
 ; __end_of_INT3_SetInterruptHandler():
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c:172
 ;     INT2_InterruptHandler = InterruptHandler;
-    1262: 54 c0 4c f0  	movff	0x54, 0x4c
-    1266: 55 c0 4d f0  	movff	0x55, 0x4d
+    12e4: 5b c0 53 f0  	movff	0x5b, 0x53
+    12e8: 5c c0 54 f0  	movff	0x5c, 0x54
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c:173
 ; }
-    126a: 12 00        	return
+    12ec: 12 00        	return
 
-0000126c <__ptext11>:
+000012ee <__ptext12>:
 ; _INT1_SetInterruptHandler():
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c:146
 ;     INT1_InterruptHandler = InterruptHandler;
-    126c: 54 c0 4e f0  	movff	0x54, 0x4e
-    1270: 55 c0 4f f0  	movff	0x55, 0x4f
+    12ee: 5b c0 55 f0  	movff	0x5b, 0x55
+    12f2: 5c c0 56 f0  	movff	0x5c, 0x56
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c:147
 ; }
-    1274: 12 00        	return
+    12f6: 12 00        	return
 
-00001276 <__ptext12>:
-; __ptext12():
+000012f8 <__ptext13>:
+; __ptext13():
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c:120
 ;     INT0_InterruptHandler = InterruptHandler;
-    1276: 54 c0 50 f0  	movff	0x54, 0x50
-    127a: 55 c0 51 f0  	movff	0x55, 0x51
+    12f8: 5b c0 57 f0  	movff	0x5b, 0x57
+    12fc: 5c c0 58 f0  	movff	0x5c, 0x58
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c:121
 ; }
-    127e: 12 00        	return
+    1300: 12 00        	return
 
-00001280 <__ptext3>:
+00001302 <__ptext4>:
 ; __end_of_INT0_SetInterruptHandler():
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c:131
 ;     INTCONbits.TMR0IE = 1;
-    1280: f2 8a        	bsf	0xf2, 0x5, a
+    1302: f2 8a        	bsf	0xf2, 0x5, a
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c:132
 ; }
-    1282: 12 00        	return
+    1304: 12 00        	return
 
-00001284 <__ptext17>:
-; __ptext17():
+00001306 <__ptext18>:
+; __ptext18():
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c:162
 ; }
-    1284: 12 00        	return
+    1306: 12 00        	return
 
 Disassembly of section intcode:
 
@@ -520,8 +601,8 @@ Disassembly of section intcode:
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c:89
 ; void __interrupt() INTERRUPT_InterruptManager (void)
        8: 01 82        	bsf	0x1, 0x1, a
-       a: fa cf 52 f0  	movff	0xffa, 0x52
-       e: fb cf 53 f0  	movff	0xffb, 0x53
+       a: fa cf 59 f0  	movff	0xffa, 0x59
+       e: fb cf 5a f0  	movff	0xffb, 0x5a
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c:92
 ;     if(INTCONbits.PEIE == 1)
       12: f2 ac        	btfss	0xf2, 0x6, a
@@ -540,16 +621,12 @@ Disassembly of section intcode:
       38: 20 ef 00 f0  	goto	0x40
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c:96
 ;             TMR0_OverflowISR();
-      3c: c7 ec 08 f0  	call	0x118e
+      3c: ef ec 08 f0  	call	0x11de
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c:99
 ; }
-      40: 53 c0 fb ff  	movff	0x53, 0xffb
-; _tmr0PeriodCount():
-; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c:99
-      44: 52 c0 fa ff  	movff	0x52, 0xffa
-; __pnvCOMRAM():
-; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c:99
+      40: 5a c0 fb ff  	movff	0x5a, 0xffb
+      44: 59 c0 fa ff  	movff	0x59, 0xffa
       48: 01 92        	bcf	0x1, 0x1, a
-; _INT3_InterruptHandler():
+; _tmr0PeriodCount():
 ; /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c:99
       4a: 11 00        	retfie	1

@@ -12,31 +12,33 @@
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
 $/Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-cinit CODE 0 1208 1208 1A 1 2
-text0 CODE 0 1106 1106 44 1 2
-text1 CODE 0 1234 1234 E 1 2
-text2 CODE 0 1046 1046 60 1 2
-text3 CODE 0 1280 1280 4 1 2
-text4 CODE 0 1222 1222 12 1 2
-text5 CODE 0 11C4 11C4 28 1 2
-text6 CODE 0 124E 124E A 1 2
-text7 CODE 0 11EC 11EC 1C 1 2
-text8 CODE 0 114A 114A 44 1 2
-text9 CODE 0 1258 1258 A 1 2
-nvCOMRAM COMRAM 1 48 48 A 1 1
-text10 CODE 0 1262 1262 A 1 2
-text11 CODE 0 126C 126C A 1 2
-text12 CODE 0 1276 1276 A 1 2
-text13 CODE 0 1242 1242 C 1 2
-text15 CODE 0 118E 118E 36 1 2
-text16 CODE 0 10A6 10A6 60 1 2
-text17 CODE 0 1284 1284 2 1 2
-cstackCOMRAM COMRAM 1 52 52 7 1 1
+cinit CODE 0 128A 128A 1A 1 2
+text0 CODE 0 1140 1140 5A 1 2
+text1 CODE 0 12B6 12B6 E 1 2
+text2 CODE 0 1046 1046 96 1 2
+text3 CODE 0 1214 1214 32 1 2
+text4 CODE 0 1302 1302 4 1 2
+text5 CODE 0 12A4 12A4 12 1 2
+text6 CODE 0 1246 1246 28 1 2
+text7 CODE 0 12D0 12D0 A 1 2
+text8 CODE 0 126E 126E 1C 1 2
+text9 CODE 0 119A 119A 44 1 2
+nvCOMRAM COMRAM 1 4F 4F A 1 1
+text10 CODE 0 12DA 12DA A 1 2
+text11 CODE 0 12E4 12E4 A 1 2
+text12 CODE 0 12EE 12EE A 1 2
+text13 CODE 0 12F8 12F8 A 1 2
+text14 CODE 0 12C4 12C4 C 1 2
+text16 CODE 0 11DE 11DE 36 1 2
+text17 CODE 0 10DC 10DC 64 1 2
+text18 CODE 0 1306 1306 2 1 2
+cstackCOMRAM COMRAM 1 59 59 4 1 1
+cstackBANK0 BANK0 1 60 60 3 1 1
 intcode CODE 0 8 8 44 1 2
 smallconst SMALLCONST 0 1000 1000 46 1 2
-bssCOMRAM COMRAM 1 2 2 46 1 1
+bssCOMRAM COMRAM 1 2 2 4D 1 1
 config CONFIG 4 300000 300000 E 1 1
-$/tmp/xcpvhFoci/driver_tmp_9.o
+$/tmp/xc24RT9od/driver_tmp_9.o
 init CODE 0 4C 4C 4 1 2
 reset_vec CODE 0 0 0 4 1 2
 config CONFIG 4 300000 300000 E 1 1
@@ -46,9 +48,9 @@ config CONFIG 4 300000 300000 E 1 1
 #    <class name> <range> <delta>
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
-RAM 60-E40 1
+RAM 63-E40 1
 SFR E41-FFF 1
-BANK0 60-FF 1
+BANK0 63-FF 1
 BANK1 100-1FF 1
 BANK2 200-2FF 1
 BANK3 300-3FF 1
@@ -60,22 +62,23 @@ BANK8 800-8FF 1
 BANK9 900-9FF 1
 CONST 4-7 1
 CONST 50-FFF 1
-CONST 1286-7FFF 1
+CONST 1308-7FFF 1
 IDLOC 200000-200007 1
-SMALLCONST 1286-7FFF 1
+SMALLCONST 1308-7FFF 1
 CODE 4-7 1
 CODE 50-FFF 1
-CODE 1286-7FFF 1
+CODE 1308-7FFF 1
 BANK10 A00-AFF 1
 BANK11 B00-BFF 1
 BANK12 C00-CFF 1
 BANK13 D00-DFF 1
 BANK14 E00-E40 1
-BIGRAM 59-E40 1
+BIGRAM 5D-5F 1
+BIGRAM 63-E40 1
 BIGSFR E41-FFF 1
-COMRAM 59-5F 1
+COMRAM 5D-5F 1
 EEDATA F00000-F003FF 1
-MEDIUMCONST 1286-7FFF 1
+MEDIUMCONST 1308-7FFF 1
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -91,146 +94,158 @@ MEDIUMCONST 1286-7FFF 1
 %LINETAB
 $/Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 8 intcode CODE >89:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c
-8 intcode CODE >8340:/tmp/xcpvhFoci/driver_tmp_1.s
+8 intcode CODE >8517:/tmp/xc24RT9od/driver_tmp_1.s
 12 intcode CODE >92:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c
 20 intcode CODE >94:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c
 3C intcode CODE >96:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c
 40 intcode CODE >99:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c
-1284 text17 CODE >159:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c
-1284 text17 CODE >162:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c
-10A6 text16 CODE >44:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
-10A6 text16 CODE >47:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
-10B6 text16 CODE >48:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
-10B8 text16 CODE >49:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
-10C8 text16 CODE >50:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
-10CE text16 CODE >52:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
-10D0 text16 CODE >53:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
-10D4 text16 CODE >55:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
-10D8 text16 CODE >56:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
-10DA text16 CODE >57:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
-10DC text16 CODE >58:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
-10EC text16 CODE >59:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
-10EE text16 CODE >60:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
-10EE text16 CODE >61:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
-10F0 text16 CODE >63:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
-10F2 text16 CODE >64:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
-1102 text16 CODE >65:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
-1104 text16 CODE >67:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
-118E text15 CODE >139:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c
-118E text15 CODE >144:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c
-1192 text15 CODE >145:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c
-1196 text15 CODE >147:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c
-11A8 text15 CODE >149:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c
-11C0 text15 CODE >151:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c
-11C2 text15 CODE >152:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c
-1242 text13 CODE >39:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/clock.c
-1242 text13 CODE >41:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/clock.c
-1246 text13 CODE >45:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/clock.c
-1248 text13 CODE >48:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/clock.c
-124A text13 CODE >51:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/clock.c
-124C text13 CODE >55:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/clock.c
-1276 text12 CODE >119:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c
-1276 text12 CODE >120:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c
-127E text12 CODE >121:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c
-126C text11 CODE >145:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c
-126C text11 CODE >146:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c
-1274 text11 CODE >147:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c
-1262 text10 CODE >171:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c
-1262 text10 CODE >172:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c
-126A text10 CODE >173:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c
-1258 text9 CODE >197:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c
-1258 text9 CODE >198:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c
-1260 text9 CODE >199:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c
-114A text8 CODE >43:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c
-114A text8 CODE >46:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c
-114C text8 CODE >50:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c
-114E text8 CODE >51:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c
-1150 text8 CODE >53:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c
-115C text8 CODE >58:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c
-115E text8 CODE >59:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c
-1160 text8 CODE >61:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c
-116C text8 CODE >66:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c
-116E text8 CODE >67:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c
-1170 text8 CODE >69:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c
-117C text8 CODE >74:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c
-117E text8 CODE >75:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c
-1180 text8 CODE >77:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c
-118C text8 CODE >80:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c
-11EC text7 CODE >38:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/pins.c
-11EC text7 CODE >43:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/pins.c
-11EE text7 CODE >44:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/pins.c
-11F0 text7 CODE >45:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/pins.c
-11F2 text7 CODE >53:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/pins.c
-11F6 text7 CODE >54:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/pins.c
-11FA text7 CODE >55:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/pins.c
-11FE text7 CODE >64:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/pins.c
-1202 text7 CODE >85:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/pins.c
-1204 text7 CODE >89:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/pins.c
-1206 text7 CODE >90:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/pins.c
-124E text6 CODE >154:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c
-124E text6 CODE >156:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c
-1256 text6 CODE >157:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c
-11C4 text5 CODE >48:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c
-11C4 text5 CODE >51:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c
-11C6 text5 CODE >52:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c
-11CA text5 CODE >53:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c
-11CE text5 CODE >54:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c
-11D6 text5 CODE >55:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c
-11E2 text5 CODE >57:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c
-11E4 text5 CODE >58:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c
-11E6 text5 CODE >60:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c
-11EA text5 CODE >66:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c
-1222 text4 CODE >39:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/system.c
-1222 text4 CODE >41:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/system.c
-1226 text4 CODE >42:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/system.c
-122A text4 CODE >43:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/system.c
-122E text4 CODE >44:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/system.c
-1232 text4 CODE >45:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/system.c
-1280 text3 CODE >129:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c
-1280 text3 CODE >131:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c
-1282 text3 CODE >132:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c
-1046 text2 CODE >34:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
+1306 text18 CODE >159:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c
+1306 text18 CODE >162:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c
+10DC text17 CODE >56:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
+10DC text17 CODE >59:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
+10EC text17 CODE >60:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
+10EE text17 CODE >61:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
+10FE text17 CODE >62:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
+1104 text17 CODE >64:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
+1106 text17 CODE >65:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
+110A text17 CODE >67:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
+110E text17 CODE >68:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
+1110 text17 CODE >69:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
+1112 text17 CODE >70:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
+1122 text17 CODE >71:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
+1124 text17 CODE >72:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
+1128 text17 CODE >74:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
+112A text17 CODE >76:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
+112C text17 CODE >77:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
+113C text17 CODE >78:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
+113E text17 CODE >80:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
+11DE text16 CODE >139:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c
+11DE text16 CODE >144:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c
+11E2 text16 CODE >145:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c
+11E6 text16 CODE >147:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c
+11F8 text16 CODE >149:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c
+1210 text16 CODE >151:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c
+1212 text16 CODE >152:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c
+12C4 text14 CODE >39:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/clock.c
+12C4 text14 CODE >41:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/clock.c
+12C8 text14 CODE >45:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/clock.c
+12CA text14 CODE >48:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/clock.c
+12CC text14 CODE >51:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/clock.c
+12CE text14 CODE >55:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/clock.c
+12F8 text13 CODE >119:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c
+12F8 text13 CODE >120:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c
+1300 text13 CODE >121:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c
+12EE text12 CODE >145:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c
+12EE text12 CODE >146:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c
+12F6 text12 CODE >147:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c
+12E4 text11 CODE >171:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c
+12E4 text11 CODE >172:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c
+12EC text11 CODE >173:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c
+12DA text10 CODE >197:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c
+12DA text10 CODE >198:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c
+12E2 text10 CODE >199:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c
+119A text9 CODE >43:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c
+119A text9 CODE >46:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c
+119C text9 CODE >50:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c
+119E text9 CODE >51:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c
+11A0 text9 CODE >53:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c
+11AC text9 CODE >58:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c
+11AE text9 CODE >59:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c
+11B0 text9 CODE >61:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c
+11BC text9 CODE >66:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c
+11BE text9 CODE >67:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c
+11C0 text9 CODE >69:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c
+11CC text9 CODE >74:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c
+11CE text9 CODE >75:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c
+11D0 text9 CODE >77:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c
+11DC text9 CODE >80:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c
+126E text8 CODE >38:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/pins.c
+126E text8 CODE >43:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/pins.c
+1270 text8 CODE >44:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/pins.c
+1272 text8 CODE >45:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/pins.c
+1274 text8 CODE >53:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/pins.c
+1278 text8 CODE >54:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/pins.c
+127C text8 CODE >55:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/pins.c
+1280 text8 CODE >64:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/pins.c
+1284 text8 CODE >85:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/pins.c
+1286 text8 CODE >89:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/pins.c
+1288 text8 CODE >90:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/pins.c
+12D0 text7 CODE >154:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c
+12D0 text7 CODE >156:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c
+12D8 text7 CODE >157:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c
+1246 text6 CODE >48:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c
+1246 text6 CODE >51:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c
+1248 text6 CODE >52:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c
+124C text6 CODE >53:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c
+1250 text6 CODE >54:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c
+1258 text6 CODE >55:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c
+1264 text6 CODE >57:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c
+1266 text6 CODE >58:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c
+1268 text6 CODE >60:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c
+126C text6 CODE >66:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c
+12A4 text5 CODE >39:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/system.c
+12A4 text5 CODE >41:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/system.c
+12A8 text5 CODE >42:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/system.c
+12AC text5 CODE >43:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/system.c
+12B0 text5 CODE >44:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/system.c
+12B4 text5 CODE >45:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/system.c
+1302 text4 CODE >129:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c
+1302 text4 CODE >131:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c
+1304 text4 CODE >132:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c
+1214 text3 CODE >47:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
+1214 text3 CODE >48:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
+1218 text3 CODE >49:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
+121A text3 CODE >50:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
+122E text3 CODE >51:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
+1240 text3 CODE >52:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
+1244 text3 CODE >53:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
 1046 text2 CODE >35:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
-1048 text2 CODE >36:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
+1046 text2 CODE >36:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
 104A text2 CODE >37:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
 104C text2 CODE >38:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
-1080 text2 CODE >39:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
-1092 text2 CODE >40:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
-10A4 text2 CODE >41:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
-1234 text1 CODE >5:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/hc164.c
-1234 text1 CODE >6:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/hc164.c
-1236 text1 CODE >7:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/hc164.c
-1238 text1 CODE >8:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/hc164.c
-123A text1 CODE >9:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/hc164.c
-123C text1 CODE >10:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/hc164.c
-123E text1 CODE >11:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/hc164.c
-1240 text1 CODE >12:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/hc164.c
-1106 text0 CODE >69:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
-1106 text0 CODE >70:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
-110A text0 CODE >71:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
-110E text0 CODE >72:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
-1112 text0 CODE >74:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
-111E text0 CODE >75:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
-1122 text0 CODE >76:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
-1124 text0 CODE >77:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
-1126 text0 CODE >81:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
-1136 text0 CODE >82:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
-1208 cinit CODE >6762:/tmp/xcpvhFoci/driver_tmp_1.s
-1208 cinit CODE >6764:/tmp/xcpvhFoci/driver_tmp_1.s
-1208 cinit CODE >6767:/tmp/xcpvhFoci/driver_tmp_1.s
-1208 cinit CODE >6787:/tmp/xcpvhFoci/driver_tmp_1.s
-120C cinit CODE >6788:/tmp/xcpvhFoci/driver_tmp_1.s
-120E cinit CODE >6789:/tmp/xcpvhFoci/driver_tmp_1.s
-120E cinit CODE >6790:/tmp/xcpvhFoci/driver_tmp_1.s
-1210 cinit CODE >6791:/tmp/xcpvhFoci/driver_tmp_1.s
-1212 cinit CODE >6792:/tmp/xcpvhFoci/driver_tmp_1.s
-1214 cinit CODE >6798:/tmp/xcpvhFoci/driver_tmp_1.s
-1214 cinit CODE >6800:/tmp/xcpvhFoci/driver_tmp_1.s
-1216 cinit CODE >6801:/tmp/xcpvhFoci/driver_tmp_1.s
-1218 cinit CODE >6803:/tmp/xcpvhFoci/driver_tmp_1.s
-121A cinit CODE >6804:/tmp/xcpvhFoci/driver_tmp_1.s
-121C cinit CODE >6805:/tmp/xcpvhFoci/driver_tmp_1.s
-121E cinit CODE >6806:/tmp/xcpvhFoci/driver_tmp_1.s
+104E text2 CODE >39:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
+1084 text2 CODE >40:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
+1096 text2 CODE >41:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
+10BA text2 CODE >42:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
+10C8 text2 CODE >44:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
+10DA text2 CODE >45:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
+12B6 text1 CODE >5:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/hc164.c
+12B6 text1 CODE >6:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/hc164.c
+12B8 text1 CODE >7:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/hc164.c
+12BA text1 CODE >8:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/hc164.c
+12BC text1 CODE >9:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/hc164.c
+12BE text1 CODE >10:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/hc164.c
+12C0 text1 CODE >11:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/hc164.c
+12C2 text1 CODE >12:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/hc164.c
+1140 text0 CODE >82:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
+1140 text0 CODE >83:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
+1144 text0 CODE >84:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
+1148 text0 CODE >85:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
+114C text0 CODE >87:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
+1158 text0 CODE >88:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
+115C text0 CODE >89:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
+115E text0 CODE >90:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
+1160 text0 CODE >93:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
+1170 text0 CODE >94:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
+1172 text0 CODE >95:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
+1176 text0 CODE >98:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
+1186 text0 CODE >99:/Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
+128A cinit CODE >6763:/tmp/xc24RT9od/driver_tmp_1.s
+128A cinit CODE >6765:/tmp/xc24RT9od/driver_tmp_1.s
+128A cinit CODE >6768:/tmp/xc24RT9od/driver_tmp_1.s
+128A cinit CODE >6790:/tmp/xc24RT9od/driver_tmp_1.s
+128E cinit CODE >6791:/tmp/xc24RT9od/driver_tmp_1.s
+1290 cinit CODE >6792:/tmp/xc24RT9od/driver_tmp_1.s
+1290 cinit CODE >6793:/tmp/xc24RT9od/driver_tmp_1.s
+1292 cinit CODE >6794:/tmp/xc24RT9od/driver_tmp_1.s
+1294 cinit CODE >6795:/tmp/xc24RT9od/driver_tmp_1.s
+1296 cinit CODE >6801:/tmp/xc24RT9od/driver_tmp_1.s
+1296 cinit CODE >6803:/tmp/xc24RT9od/driver_tmp_1.s
+1298 cinit CODE >6804:/tmp/xc24RT9od/driver_tmp_1.s
+129A cinit CODE >6806:/tmp/xc24RT9od/driver_tmp_1.s
+129C cinit CODE >6807:/tmp/xc24RT9od/driver_tmp_1.s
+129E cinit CODE >6808:/tmp/xc24RT9od/driver_tmp_1.s
+12A0 cinit CODE >6809:/tmp/xc24RT9od/driver_tmp_1.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -244,57 +259,57 @@ $/Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
 __Lmediumconst 0 0 MEDIUMCONST 0 mediumconst /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-__Hspace_0 1286 0 ABS 0 - /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-__Hspace_1 59 0 ABS 0 - /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+__Hspace_0 1308 0 ABS 0 - /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+__Hspace_1 63 0 ABS 0 - /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Hspace_2 0 0 ABS 0 - /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Hspace_4 60000E 0 ABS 0 - /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-_TMR0_TMRInterruptEnable 1280 0 CODE 0 text3 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+_TMR0_TMRInterruptEnable 1302 0 CODE 0 text4 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Hibigdata 0 0 CODE 0 ibigdata /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __mediumconst 1000 0 SMALLCONST 0 smallconst /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 _INT0_DefaultInterruptHandler 0 0 ABS 0 - /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-__end_of_TMR0_TMRInterruptEnable 1284 0 CODE 0 text3 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+__end_of_TMR0_TMRInterruptEnable 1306 0 CODE 0 text4 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Heeprom_data 0 0 EEDATA 0 eeprom_data /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-__end_of_INTERRUPT_Initialize 118E 0 CODE 0 text8 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+__end_of_INTERRUPT_Initialize 11DE 0 CODE 0 text9 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __L__absolute__ 0 0 ABS 0 __absolute__ /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 _INT3_DefaultInterruptHandler 0 0 ABS 0 - /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Lsmallconst 1000 0 SMALLCONST 0 smallconst /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-_hc164_init 1234 0 CODE 0 text1 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+_hc164_init 12B6 0 CODE 0 text1 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 _IOCB F5A 0 ABS 0 - /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 _LATA F89 0 ABS 0 - /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 _LATB F8A 0 ABS 0 - /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 _LATC F8B 0 ABS 0 - /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 _WPUB F5B 0 ABS 0 - /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-___sp 0 0 STACK 2 stack /tmp/xcpvhFoci/driver_tmp_9.o
-_main 1106 0 CODE 0 text0 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+___sp 0 0 STACK 2 stack /tmp/xc24RT9od/driver_tmp_9.o
+_main 1140 0 CODE 0 text0 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 btemp 1 0 ABS 0 - /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-___stack_hi 0 0 STACK 2 stack /tmp/xcpvhFoci/driver_tmp_9.o
-___stack_lo 0 0 STACK 2 stack /tmp/xcpvhFoci/driver_tmp_9.o
-start 4C 0 CODE 0 init /tmp/xcpvhFoci/driver_tmp_9.o
+___stack_hi 0 0 STACK 2 stack /tmp/xc24RT9od/driver_tmp_9.o
+___stack_lo 0 0 STACK 2 stack /tmp/xc24RT9od/driver_tmp_9.o
+start 4C 0 CODE 0 init /tmp/xc24RT9od/driver_tmp_9.o
 __HbssCOMRAM 0 0 ABS 0 bssCOMRAM /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-INT2_SetInterruptHandler@InterruptHandler 54 0 COMRAM 1 cstackCOMRAM /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-_TMR0_OverflowCallback 48 0 COMRAM 1 nvCOMRAM /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-_INT2_SetInterruptHandler 1262 0 CODE 0 text10 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+INT2_SetInterruptHandler@InterruptHandler 5B 0 COMRAM 1 cstackCOMRAM /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+_TMR0_OverflowCallback 4F 0 COMRAM 1 nvCOMRAM /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+_INT2_SetInterruptHandler 12E4 0 CODE 0 text11 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Hpowerup 0 0 CODE 0 powerup /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 _T0CONbits FD5 0 ABS 0 - /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __LnvCOMRAM 0 0 ABS 0 nvCOMRAM /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-__accesstop 60 0 ABS 0 - /tmp/xcpvhFoci/driver_tmp_9.o
-intlevel0 0 0 CODE 0 text /tmp/xcpvhFoci/driver_tmp_9.o
-intlevel1 0 0 CODE 0 text /tmp/xcpvhFoci/driver_tmp_9.o
-intlevel2 0 0 CODE 0 text /tmp/xcpvhFoci/driver_tmp_9.o
-intlevel3 0 0 CODE 0 text /tmp/xcpvhFoci/driver_tmp_9.o
+__accesstop 60 0 ABS 0 - /tmp/xc24RT9od/driver_tmp_9.o
+intlevel0 0 0 CODE 0 text /tmp/xc24RT9od/driver_tmp_9.o
+intlevel1 0 0 CODE 0 text /tmp/xc24RT9od/driver_tmp_9.o
+intlevel2 0 0 CODE 0 text /tmp/xc24RT9od/driver_tmp_9.o
+intlevel3 0 0 CODE 0 text /tmp/xc24RT9od/driver_tmp_9.o
 __LbssCOMRAM 0 0 ABS 0 bssCOMRAM /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __LnvFARRAM 0 0 FARRAM 0 nvFARRAM /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-__end_of_TMR0_OverflowISR 11C4 0 CODE 0 text15 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+__end_of_TMR0_OverflowISR 1214 0 CODE 0 text16 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Hifardata 0 0 CODE 0 ifardata /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Hclrtext 0 0 ABS 0 clrtext /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-generar_buffer_mensaje@idx 56 0 COMRAM 1 cstackCOMRAM /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-__end_of_INT1_SetInterruptHandler 1276 0 CODE 0 text11 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-__end_of_hc164_init 1242 0 CODE 0 text1 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-___inthi_sp 0 0 STACK 2 stack /tmp/xcpvhFoci/driver_tmp_9.o
-___intlo_sp 0 0 STACK 2 stack /tmp/xcpvhFoci/driver_tmp_9.o
+generar_buffer_mensaje@idx 60 0 BANK0 1 cstackBANK0 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+__end_of_INT1_SetInterruptHandler 12F8 0 CODE 0 text12 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+__end_of_hc164_init 12C4 0 CODE 0 text1 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+___inthi_sp 0 0 STACK 2 stack /tmp/xc24RT9od/driver_tmp_9.o
+___intlo_sp 0 0 STACK 2 stack /tmp/xc24RT9od/driver_tmp_9.o
 __end_of_INTERRUPT_InterruptManager 4C 0 CODE 0 intcode /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-_TMR0_DefaultOverflowCallback 1284 0 CODE 0 text17 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-_bit_corrimiento 46 0 COMRAM 1 bssCOMRAM /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+_TMR0_DefaultOverflowCallback 1306 0 CODE 0 text18 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+_bit_corrimiento 4D 0 COMRAM 1 bssCOMRAM /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Hintcode_body 0 0 ABS 0 intcode_body /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Lintsave_regs 0 0 BIGRAM 1 intsave_regs /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Hmediumconst 0 0 MEDIUMCONST 0 mediumconst /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
@@ -304,17 +319,18 @@ __HnvCOMRAM 0 0 ABS 0 nvCOMRAM /Users/jorgerodriguez/MPLABProjects/multiMatrix/o
 _INTCON2bits FF1 0 ABS 0 - /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 _INTCON3bits FF0 0 ABS 0 - /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Lintcodelo 18 0 CODE 0 intcodelo /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-_PIN_MANAGER_Initialize 11EC 0 CODE 0 text7 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-start_initialization 1208 0 CODE 0 cinit /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+_PIN_MANAGER_Initialize 126E 0 CODE 0 text8 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+start_initialization 128A 0 CODE 0 cinit /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 _OSCCON FD3 0 ABS 0 - /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __HnvFARRAM 0 0 FARRAM 0 nvFARRAM /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 _TRISCbits F94 0 ABS 0 - /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 ___rparam_used 1 0 ABS 0 - /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-__end_of_SYSTEM_Initialize 1234 0 CODE 0 text4 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-_tmr0PeriodCount 43 0 COMRAM 1 bssCOMRAM /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+__end_of_SYSTEM_Initialize 12B6 0 CODE 0 text5 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+__pcstackBANK0 60 0 BANK0 1 cstackBANK0 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+_tmr0PeriodCount 49 0 COMRAM 1 bssCOMRAM /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 _INT2_DefaultInterruptHandler 0 0 ABS 0 - /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-isa$xinst 0 0 ABS 0 - /tmp/xcpvhFoci/driver_tmp_9.o
-_INT3_SetInterruptHandler 1258 0 CODE 0 text9 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+isa$xinst 0 0 ABS 0 - /tmp/xc24RT9od/driver_tmp_9.o
+_INT3_SetInterruptHandler 12DA 0 CODE 0 text10 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Hbank0 0 0 ABS 0 bank0 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Hbank1 0 0 ABS 0 bank1 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Hbank2 0 0 ABS 0 bank2 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
@@ -354,6 +370,7 @@ __Hbigsfr 0 0 ABS 0 bigsfr /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/m
 __smallconst 1000 0 SMALLCONST 0 smallconst /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Hcomram 0 0 ABS 0 comram /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Hconfig 30000E 0 CONFIG 4 config /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+_desplazar_buffer 1214 0 CODE 0 text3 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Lbank0 0 0 ABS 0 bank0 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Lbank1 0 0 ABS 0 bank1 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Lbank2 0 0 ABS 0 bank2 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
@@ -369,7 +386,7 @@ __Lconst 0 0 CONST 0 const /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/m
 __Lidata 0 0 CODE 0 idata /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Lidloc 0 0 ABS 0 idloc /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Lnvbit 0 0 COMRAM 1 nvbit /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-INT1_SetInterruptHandler@InterruptHandler 54 0 COMRAM 1 cstackCOMRAM /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+INT1_SetInterruptHandler@InterruptHandler 5B 0 COMRAM 1 cstackCOMRAM /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Lparam 0 0 COMRAM 1 rparam /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Lrdata 0 0 COMRAM 1 rdata /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Lstack 0 0 STACK 2 stack /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
@@ -383,12 +400,12 @@ __Ltext6 0 0 ABS 0 text6 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/mul
 __Ltext7 0 0 ABS 0 text7 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Ltext8 0 0 ABS 0 text8 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Ltext9 0 0 ABS 0 text9 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-_INT0_SetInterruptHandler 1276 0 CODE 0 text12 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+_INT0_SetInterruptHandler 12F8 0 CODE 0 text13 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Hfarbss 0 0 FARRAM 0 farbss /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Lintcode_body 0 0 ABS 0 intcode_body /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 _REFOCON F9A 0 ABS 0 - /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 _INTCONbits FF2 0 ABS 0 - /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-_INTERRUPT_Initialize 114A 0 CODE 0 text8 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+_INTERRUPT_Initialize 119A 0 CODE 0 text9 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Habs1 0 0 ABS 0 abs1 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Hdata 0 0 ABS 0 data /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Hheap 0 0 HEAP 7 heap /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
@@ -405,28 +422,29 @@ __Lrbit 0 0 COMRAM 1 rbit /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/mu
 __Lrbss 0 0 COMRAM 1 rbss /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Ltemp 0 0 COMRAM 1 temp /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Ltext 0 0 ABS 0 text /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 int$flags 1 0 ABS 0 - /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Hintret 0 0 ABS 0 intret /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Hirdata 0 0 CODE 0 irdata /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-__S0 1286 0 ABS 0 - /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-__S1 59 0 ABS 0 - /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+__S0 1308 0 ABS 0 - /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+__S1 63 0 ABS 0 - /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __S4 0 0 ABS 0 - /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __S5 0 0 ABS 0 - /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-_CLOCK_Initialize 1242 0 CODE 0 text13 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-__end_of_INT2_SetInterruptHandler 126C 0 CODE 0 text10 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-__pnvCOMRAM 48 0 COMRAM 1 nvCOMRAM /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+_CLOCK_Initialize 12C4 0 CODE 0 text14 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+__end_of_INT2_SetInterruptHandler 12EE 0 CODE 0 text11 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+__pnvCOMRAM 4F 0 COMRAM 1 nvCOMRAM /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 _buffer 2 0 COMRAM 1 bssCOMRAM /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __end_of_font5x8 1038 0 SMALLCONST 0 smallconst /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-_clk_switch 45 0 COMRAM 1 bssCOMRAM /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-__end_of_mensaje 1045 0 SMALLCONST 0 smallconst /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-__end_of_TMR0_DefaultOverflowCallback 1286 0 CODE 0 text17 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+_clk_switch 4C 0 COMRAM 1 bssCOMRAM /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+__end_of_mensaje 1044 0 SMALLCONST 0 smallconst /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+__end_of_TMR0_DefaultOverflowCallback 1308 0 CODE 0 text18 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Lbigdata 0 0 BIGRAM 1 bigdata /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Hnvrram 0 0 COMRAM 1 nvrram /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-_SYSTEM_Initialize 1222 0 CODE 0 text4 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-_INT3_InterruptHandler 4A 0 COMRAM 1 nvCOMRAM /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+_SYSTEM_Initialize 12A4 0 CODE 0 text5 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+_INT3_InterruptHandler 51 0 COMRAM 1 nvCOMRAM /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Lintentry 0 0 ABS 0 intentry /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-__end_of_generar_buffer_mensaje 10A6 0 CODE 0 text2 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+__end_of_generar_buffer_mensaje 10DC 0 CODE 0 text2 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Hramtop 1000 0 RAM 0 ramtop /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Hrparam 0 0 COMRAM 1 rparam /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __activetblptr 2 0 ABS 0 - /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
@@ -435,20 +453,24 @@ __Htext10 0 0 ABS 0 text10 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/m
 __Htext11 0 0 ABS 0 text11 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Htext12 0 0 ABS 0 text12 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Htext13 0 0 ABS 0 text13 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-__Htext15 0 0 ABS 0 text15 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+__Htext14 0 0 ABS 0 text14 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Htext16 0 0 ABS 0 text16 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Htext17 0 0 ABS 0 text17 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+__Htext18 0 0 ABS 0 text18 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 _INTERRUPT_InterruptManager 8 0 CODE 0 intcode /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-__ptext10 1262 0 CODE 0 text10 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-__ptext11 126C 0 CODE 0 text11 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-__ptext12 1276 0 CODE 0 text12 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-__ptext13 1242 0 CODE 0 text13 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-__ptext15 118E 0 CODE 0 text15 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-__ptext16 10A6 0 CODE 0 text16 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-__ptext17 1284 0 CODE 0 text17 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-__end_of_PIN_MANAGER_Initialize 1208 0 CODE 0 text7 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-__end_of_TMR0_Initialize 11EC 0 CODE 0 text5 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-_TMR0_OverflowCallbackRegister 124E 0 CODE 0 text6 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+__ptext10 12DA 0 CODE 0 text10 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+__ptext11 12E4 0 CODE 0 text11 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+__ptext12 12EE 0 CODE 0 text12 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+__ptext13 12F8 0 CODE 0 text13 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+__ptext14 12C4 0 CODE 0 text14 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+__ptext16 11DE 0 CODE 0 text16 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+__ptext17 10DC 0 CODE 0 text17 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+__ptext18 1306 0 CODE 0 text18 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+__end_of_desplazar_buffer 1246 0 CODE 0 text3 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+_rotacion_pendiente 4B 0 COMRAM 1 bssCOMRAM /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+__end_of_PIN_MANAGER_Initialize 128A 0 CODE 0 text8 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+__end_of_TMR0_Initialize 126E 0 CODE 0 text6 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+_TMR0_OverflowCallbackRegister 12D0 0 CODE 0 text7 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Lbank10 0 0 ABS 0 bank10 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Lbank11 0 0 ABS 0 bank11 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Lbank12 0 0 ABS 0 bank12 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
@@ -457,87 +479,90 @@ __Lbank14 0 0 ABS 0 bank14 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/m
 __Lbigbss 0 0 BIGRAM 1 bigbss /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Lbigram 0 0 ABS 0 bigram /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Lbigsfr 0 0 ABS 0 bigsfr /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-_INT2_InterruptHandler 4C 0 COMRAM 1 nvCOMRAM /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+_INT2_InterruptHandler 53 0 COMRAM 1 nvCOMRAM /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Lcomram 0 0 ABS 0 comram /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Lconfig 0 0 CONFIG 4 config /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 _LATCbits F8B 0 ABS 0 - /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Lsivt_hi 0 0 CODE 0 sivt_hi /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Lsivt_lo 18 0 CODE 0 sivt_lo /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Lfarbss 0 0 FARRAM 0 farbss /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-___inthi_stack_hi 0 0 STACK 2 stack /tmp/xcpvhFoci/driver_tmp_9.o
-___inthi_stack_lo 0 0 STACK 2 stack /tmp/xcpvhFoci/driver_tmp_9.o
+___inthi_stack_hi 0 0 STACK 2 stack /tmp/xc24RT9od/driver_tmp_9.o
+___inthi_stack_lo 0 0 STACK 2 stack /tmp/xc24RT9od/driver_tmp_9.o
 __Lfardata 0 0 FARRAM 0 fardata /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-isa$std 1 0 ABS 0 - /tmp/xcpvhFoci/driver_tmp_9.o
-__end_of_CLOCK_Initialize 124E 0 CODE 0 text13 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-stackhi 0 0 ABS 0 - /tmp/xcpvhFoci/driver_tmp_9.o
-stacklo 0 0 ABS 0 - /tmp/xcpvhFoci/driver_tmp_9.o
+isa$std 1 0 ABS 0 - /tmp/xc24RT9od/driver_tmp_9.o
+__end_of_CLOCK_Initialize 12D0 0 CODE 0 text14 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+stackhi 0 0 ABS 0 - /tmp/xc24RT9od/driver_tmp_9.o
+stacklo 0 0 ABS 0 - /tmp/xc24RT9od/driver_tmp_9.o
 __Lintcode 8 0 CODE 0 intcode /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 _OSCCON2 FD2 0 ABS 0 - /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 _OSCTUNE F9B 0 ABS 0 - /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Lintret 0 0 ABS 0 intret /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Lirdata 0 0 CODE 0 irdata /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-_INT1_InterruptHandler 4E 0 COMRAM 1 nvCOMRAM /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+_INT1_InterruptHandler 55 0 COMRAM 1 nvCOMRAM /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 _INT1_DefaultInterruptHandler 0 0 ABS 0 - /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Lspace_0 0 0 ABS 0 - /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Lspace_1 0 0 ABS 0 - /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Lspace_2 0 0 ABS 0 - /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Lspace_4 0 0 ABS 0 - /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-INT3_SetInterruptHandler@InterruptHandler 54 0 COMRAM 1 cstackCOMRAM /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+INT3_SetInterruptHandler@InterruptHandler 5B 0 COMRAM 1 cstackCOMRAM /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __pbssCOMRAM 2 0 COMRAM 1 bssCOMRAM /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-end_of_initialization 1214 0 CODE 0 cinit /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-_TMR0_Initialize 11C4 0 CODE 0 text5 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+end_of_initialization 1296 0 CODE 0 cinit /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+_TMR0_Initialize 1246 0 CODE 0 text6 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Lnvrram 0 0 COMRAM 1 nvrram /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Hintentry 0 0 ABS 0 intentry /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 _RCONbits FD0 0 ABS 0 - /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Hreset_vec 4 0 CODE 0 reset_vec /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-_INT0_InterruptHandler 50 0 COMRAM 1 nvCOMRAM /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-_INT1_SetInterruptHandler 126C 0 CODE 0 text11 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+_INT0_InterruptHandler 57 0 COMRAM 1 nvCOMRAM /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+_INT1_SetInterruptHandler 12EE 0 CODE 0 text12 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Lramtop 1000 0 RAM 0 ramtop /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+desplazar_buffer@i 5C 0 COMRAM 1 cstackCOMRAM /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Lrparam 0 0 COMRAM 1 rparam /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-__pcinit 1208 0 CODE 0 cinit /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-__ptext0 1106 0 CODE 0 text0 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-__ptext1 1234 0 CODE 0 text1 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+__pcinit 128A 0 CODE 0 cinit /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+__ptext0 1140 0 CODE 0 text0 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+__ptext1 12B6 0 CODE 0 text1 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __ptext2 1046 0 CODE 0 text2 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-__ptext3 1280 0 CODE 0 text3 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-__ptext4 1222 0 CODE 0 text4 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-__ptext5 11C4 0 CODE 0 text5 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-__ptext6 124E 0 CODE 0 text6 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-__ptext7 11EC 0 CODE 0 text7 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-__ptext8 114A 0 CODE 0 text8 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-__ptext9 1258 0 CODE 0 text9 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+__ptext3 1214 0 CODE 0 text3 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+__ptext4 1302 0 CODE 0 text4 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+__ptext5 12A4 0 CODE 0 text5 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+__ptext6 1246 0 CODE 0 text6 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+__ptext7 12D0 0 CODE 0 text7 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+__ptext8 126E 0 CODE 0 text8 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+__ptext9 119A 0 CODE 0 text9 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Lstruct 0 0 COMRAM 1 struct /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Ltext10 0 0 ABS 0 text10 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Ltext11 0 0 ABS 0 text11 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Ltext12 0 0 ABS 0 text12 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Ltext13 0 0 ABS 0 text13 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-__Ltext15 0 0 ABS 0 text15 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+__Ltext14 0 0 ABS 0 text14 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Ltext16 0 0 ABS 0 text16 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Ltext17 0 0 ABS 0 text17 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-__ramtop 1000 0 RAM 0 ramtop /tmp/xcpvhFoci/driver_tmp_9.o
+__Ltext18 0 0 ABS 0 text18 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+__ramtop 1000 0 RAM 0 ramtop /tmp/xc24RT9od/driver_tmp_9.o
 __Lpowerup 0 0 CODE 0 powerup /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Leeprom_data 0 0 EEDATA 0 eeprom_data /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __H__absolute__ 0 0 ABS 0 __absolute__ /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __psmallconst 1000 0 SMALLCONST 0 smallconst /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-__end_of_INT3_SetInterruptHandler 1262 0 CODE 0 text9 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+__end_of_INT3_SetInterruptHandler 12E4 0 CODE 0 text10 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Lreset_vec 0 0 CODE 0 reset_vec /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-INT0_SetInterruptHandler@InterruptHandler 54 0 COMRAM 1 cstackCOMRAM /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-_TMR0_CustomISR 10A6 0 CODE 0 text16 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-___heap_hi 0 0 ABS 0 - /tmp/xcpvhFoci/driver_tmp_9.o
-___heap_lo 0 0 ABS 0 - /tmp/xcpvhFoci/driver_tmp_9.o
+INT0_SetInterruptHandler@InterruptHandler 5B 0 COMRAM 1 cstackCOMRAM /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+_TMR0_CustomISR 10DC 0 CODE 0 text17 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+___heap_hi 0 0 ABS 0 - /tmp/xc24RT9od/driver_tmp_9.o
+___heap_lo 0 0 ABS 0 - /tmp/xc24RT9od/driver_tmp_9.o
 ___param_bank 0 0 ABS 0 - /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-___intlo_stack_hi 0 0 STACK 2 stack /tmp/xcpvhFoci/driver_tmp_9.o
-___intlo_stack_lo 0 0 STACK 2 stack /tmp/xcpvhFoci/driver_tmp_9.o
+___intlo_stack_hi 0 0 STACK 2 stack /tmp/xc24RT9od/driver_tmp_9.o
+___intlo_stack_lo 0 0 STACK 2 stack /tmp/xc24RT9od/driver_tmp_9.o
 __Hbigdata 0 0 BIGRAM 1 bigdata /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-__end_of__initialization 1214 0 CODE 0 cinit /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+__end_of__initialization 1296 0 CODE 0 cinit /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Libigdata 0 0 CODE 0 ibigdata /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Lclrtext 0 0 ABS 0 clrtext /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-__end_of_INT0_SetInterruptHandler 1280 0 CODE 0 text12 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+__end_of_INT0_SetInterruptHandler 1302 0 CODE 0 text13 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 _font5x8 1001 0 SMALLCONST 0 smallconst /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-__pcstackCOMRAM 52 0 COMRAM 1 cstackCOMRAM /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+__pcstackCOMRAM 59 0 COMRAM 1 cstackCOMRAM /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 _mensaje 1038 0 SMALLCONST 0 smallconst /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-_columna_actual 47 0 COMRAM 1 bssCOMRAM /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-__end_of_main 114A 0 CODE 0 text0 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+_columna_actual 4E 0 COMRAM 1 bssCOMRAM /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+__end_of_main 119A 0 CODE 0 text0 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __pintcode 8 0 CODE 0 intcode /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 _T0CON FD5 0 ABS 0 - /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 _TMR0H FD7 0 ABS 0 - /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
@@ -553,19 +578,20 @@ __LRAM 1 0 ABS 0 - /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatr
 __Lbss 0 0 RAM 1 bss /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Lram 0 0 ABS 0 ram /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Lsfr 0 0 ABS 0 sfr /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-__end_of_TMR0_CustomISR 1106 0 CODE 0 text16 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+desplazar_buffer@primera_columna 5B 0 COMRAM 1 cstackCOMRAM /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+__end_of_TMR0_CustomISR 1140 0 CODE 0 text17 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Hsivt_hi 0 0 CODE 0 sivt_hi /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Hsivt_lo 18 0 CODE 0 sivt_lo /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-__initialization 1208 0 CODE 0 cinit /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+__initialization 128A 0 CODE 0 cinit /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 btemp0 1 0 ABS 0 - /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 btemp1 2 0 ABS 0 - /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Hfardata 0 0 FARRAM 0 fardata /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Hsmallconst 1046 0 SMALLCONST 0 smallconst /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-_TMR0_OverflowISR 118E 0 CODE 0 text15 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-generar_buffer_mensaje@c 58 0 COMRAM 1 cstackCOMRAM /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-generar_buffer_mensaje@l 57 0 COMRAM 1 cstackCOMRAM /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-__end_of_TMR0_OverflowCallbackRegister 1258 0 CODE 0 text6 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
-TMR0_OverflowCallbackRegister@callbackHandler 54 0 COMRAM 1 cstackCOMRAM /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+_TMR0_OverflowISR 11DE 0 CODE 0 text16 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+generar_buffer_mensaje@c 61 0 BANK0 1 cstackBANK0 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+generar_buffer_mensaje@l 62 0 BANK0 1 cstackBANK0 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+__end_of_TMR0_OverflowCallbackRegister 12DA 0 CODE 0 text7 /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
+TMR0_OverflowCallbackRegister@callbackHandler 5B 0 COMRAM 1 cstackCOMRAM /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Lifardata 0 0 CODE 0 ifardata /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Hintsave_regs 0 0 BIGRAM 1 intsave_regs /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
 __Hintcode 4C 0 CODE 0 intcode /Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.o
@@ -594,11 +620,12 @@ __Hintcode 4C 0 CODE 0 intcode /Users/jorgerodriguez/MPLABProjects/multiMatrix/o
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-text2 0 1046 1046 240 1
+text2 0 1046 1046 2C2 1
+cstackBANK0 1 60 60 3 1
 reset_vec 0 0 0 4 1
 intcode 0 8 8 48 1
 smallconst 0 1000 1000 46 1
-bssCOMRAM 1 2 2 57 1
+bssCOMRAM 1 2 2 5B 1
 # %NOTES Section
 # This section contains data of all the note-psects.  The beginning of the section
 # is indicated by %NOTES. The first line indicates the name and decimal

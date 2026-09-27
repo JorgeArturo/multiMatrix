@@ -8,25 +8,26 @@
 static volatile uint8_t columna_actual = 0; // Columna del mensaje
 static volatile uint8_t bit_corrimiento = 0; // Bit siendo corrido (0 a 24)
 static volatile uint8_t clk_switch = 0; // Dato actual a enviar al 74HC164
-// Fuente simple 5x8
+static volatile uint8_t rotacion_pendiente = 0;
+// Fuente 5x8 almacenada por columnas (bit 0 arriba, bit 7 abajo)
 const uint8_t font5x8[][5] = {
     {0x00,0x00,0x00,0x00,0x00}, // Espacio
-    {0x7F,0x08,0x08,0x08,0x7F}, // H
-    {0x3E,0x41,0x41,0x41,0x3E}, // O
-    {0x7F,0x40,0x40,0x40,0x40}, // L
-    {0x7F,0x09,0x09,0x09,0x7F}, // A
+    {0xFF,0x18,0x18,0x18,0xFF}, // H
+    {0x7E,0x81,0x81,0x81,0x7E}, // O
+    {0xFF,0x80,0x80,0x80,0x80}, // L
+    {0xFE,0x91,0x91,0x91,0xFE}, // A
     {0x00,0x00,0x00,0x00,0x00}, // Espacio
-    {0x7F,0x02,0x04,0x02,0x7F}, // M
-    {0x7F,0x01,0x01,0x01,0x7F}, // U
-    {0x7F,0x04,0x08,0x10,0x7F}, // N
-    {0x7F,0x41,0x41,0x22,0x1C},  // D
-    {0x3E,0x41,0x41,0x41,0x3E}, // O
+    {0xFF,0x06,0x18,0x06,0xFF}, // M
+    {0x7F,0x80,0x80,0x80,0x7F}, // U
+    {0xFF,0x06,0x18,0x60,0xFF}, // N
+    {0xFF,0x81,0x81,0x66,0x3C}, // D
+    {0x7E,0x81,0x81,0x81,0x7E}, // O
 };
 
 // Indices para " HOLA MUNDO "
-const uint8_t mensaje[] = {0,1,2,3,4,0,5,6,7,8,9,10,0};
+const uint8_t mensaje[] = {0,1,2,3,4,5,6,7,8,9,10,0};
 #define LETRAS (sizeof(mensaje)/sizeof(mensaje[0]))
-#define COLS_TOTAL (LETRAS*5)
+#define COLS_TOTAL (LETRAS*5 + LETRAS - 1)
 
 // Buffer de columnas para scroll
 uint8_t buffer[COLS_TOTAL] = {0};
@@ -35,9 +36,20 @@ void generar_buffer_mensaje(void){
     uint8_t idx=0;
     for(uint8_t l=0; l<LETRAS; l++) {
         for(uint8_t c=0; c<5; c++) {
-            buffer[idx++] = font5x8[mensaje[l]][c];
+            buffer[idx++] = (uint8_t)(font5x8[mensaje[l]][c] ^ 0xFF);
+        }
+        if(l + 1 < LETRAS) {
+            buffer[idx++] = 0xFF;
         }
     }
+}
+
+static void desplazar_buffer(void) {
+    uint8_t primera_columna = buffer[0];
+    for(uint8_t i=0; i<COLS_TOTAL-1; i++) {
+        buffer[i] = buffer[i+1];
+    }
+    buffer[COLS_TOTAL-1] = primera_columna;
 }
 
 // Interrupción de TMR0: cada vez manda UN bit del dato actual en AB, genera pulso de CLK
@@ -57,6 +69,7 @@ void TMR0_CustomISR(void) {
         bit_corrimiento++;
         if(bit_corrimiento >= 25) {
             bit_corrimiento = 0; // Reinicia el corrimiento
+            rotacion_pendiente = 1;
         }
         clk_switch = 0;
     }
@@ -77,7 +90,11 @@ int main(void) {
     INTCONbits.GIE = 1;
 
     while(1) {
-        // Nada aquí, scroll y corrimiento se hace por la TMR0
+        if(rotacion_pendiente != 0) {
+            rotacion_pendiente = 0;
+            desplazar_buffer();
+        }
+
         if(clk_switch == 0)
             LATB = buffer[bit_corrimiento]; // Para debug, ver la columna actual en PORTB
             

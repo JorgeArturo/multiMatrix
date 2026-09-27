@@ -1,7 +1,7 @@
 ### HEXMate logfile and output summary ###
 
 ### Command-line arguments ###
- /tmp/xcpvhFoci/driver_tmp_3.o
+ /tmp/xc24RT9od/driver_tmp_3.o
  -O/Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.hex
  -logfile=/Users/jorgerodriguez/MPLABProjects/multiMatrix/out/multiMatrix/default.hxl
  -addressing=1
@@ -9,19 +9,21 @@
 
 ### Memory Usage ###
  Input file ranges:
-  0h - 3h		(/tmp/xcpvhFoci/driver_tmp_3.o)
-  8h - 4Fh		(/tmp/xcpvhFoci/driver_tmp_3.o)
-  1000h - 1285h		(/tmp/xcpvhFoci/driver_tmp_3.o)
-  300000h - 30000Dh		(/tmp/xcpvhFoci/driver_tmp_3.o)
+  0h - 3h		(/tmp/xc24RT9od/driver_tmp_3.o)
+  8h - 4Fh		(/tmp/xc24RT9od/driver_tmp_3.o)
+  1000h - 1044h		(/tmp/xc24RT9od/driver_tmp_3.o)
+  1046h - 1307h		(/tmp/xc24RT9od/driver_tmp_3.o)
+  300000h - 30000Dh		(/tmp/xc24RT9od/driver_tmp_3.o)
  Unused ranges:
   4h - 7h
   50h - FFFh
-  1286h - 2FFFFFh
+  1045h - 1045h
+  1308h - 2FFFFFh
 
 ### Hex Memory Map ###
  Legend:
   -- = Unused memory
-  H1 = Input file             (/tmp/xcpvhFoci/driver_tmp_3.o)
+  H1 = Input file             (/tmp/xc24RT9od/driver_tmp_3.o)
 ----------------------------------------------------------
          | 00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
 ----------------------------------------------------------
@@ -35,7 +37,7 @@
 00001010 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00001020 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00001030 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00001040 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00001040 | H1 H1 H1 H1 H1 -- H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00001050 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00001060 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00001070 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
@@ -71,7 +73,15 @@
 00001250 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00001260 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00001270 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00001280 | H1 H1 H1 H1 H1 H1 -- -- -- -- -- -- -- -- -- --
+00001280 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00001290 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+000012A0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+000012B0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+000012C0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+000012D0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+000012E0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+000012F0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00001300 | H1 H1 H1 H1 H1 H1 H1 H1 -- -- -- -- -- -- -- --
 ----------------------------------------------------------
 00300000 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- --
 00300010 | --
