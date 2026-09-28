@@ -4,85 +4,153 @@
 #include "mcc_generated_files/timer/tmr0.h"
 #include "hc164.h"
 
-// Variables de control
-static volatile uint8_t columna_actual = 0; // Columna del mensaje
-static volatile uint8_t bit_corrimiento = 0; // Bit siendo corrido (0 a 24)
-static volatile uint8_t clk_switch = 0; // Dato actual a enviar al 74HC164
-static volatile uint8_t rotacion_pendiente = 0;
-// Fuente 5x8 almacenada por columnas (bit 0 arriba, bit 7 abajo)
-const uint8_t font5x8[][5] = {
-    {0x00,0x00,0x00,0x00,0x00}, // Espacio
-    {0xFF,0x18,0x18,0x18,0xFF}, // H
-    {0x7E,0x81,0x81,0x81,0x7E}, // O
-    {0xFF,0x80,0x80,0x80,0x80}, // L
-    {0xFE,0x91,0x91,0x91,0xFE}, // A
-    {0x00,0x00,0x00,0x00,0x00}, // Espacio
-    {0xFF,0x06,0x18,0x06,0xFF}, // M
-    {0x7F,0x80,0x80,0x80,0x7F}, // U
-    {0xFF,0x06,0x18,0x60,0xFF}, // N
-    {0xFF,0x81,0x81,0x66,0x3C}, // D
-    {0x7E,0x81,0x81,0x81,0x7E}, // O
-};
+#define ANCHO_MATRIZ 25
+#define ALTO_MATRIZ 7
+#define COLUMNA_NAVE 4
+#define DIVISOR_SCROLL 40
+#define DEBOUNCE_FRAMES 3
+#define TMR0_INTERVAL_100US 65486U
 
-// Indices para " HOLA MUNDO "
-const uint8_t mensaje[] = {0,1,2,3,4,5,6,7,8,9,10,0};
-#define LETRAS (sizeof(mensaje)/sizeof(mensaje[0]))
-#define COLS_TOTAL (LETRAS*5 + LETRAS - 1)
+static volatile uint8_t columna_actual = 0;
+static volatile uint8_t clk_switch = 0;
+static volatile uint8_t frames_pendientes = 0;
+static volatile uint8_t mapa_activo = 0;
+static volatile uint8_t juego_iniciado = 0;
+static volatile uint8_t juego_terminado = 0;
+static volatile uint8_t posicion_nave = 3;
+static volatile uint8_t mapas[2][ANCHO_MATRIZ];
 
-// Buffer de columnas para scroll
-uint8_t buffer[COLS_TOTAL] = {0};
+static uint8_t centro_hueco = 3;
+static uint8_t semilla_aleatoria = 0xA5;
 
-void generar_buffer_mensaje(void){
-    uint8_t idx=0;
-    for(uint8_t l=0; l<LETRAS; l++) {
-        for(uint8_t c=0; c<5; c++) {
-            buffer[idx++] = (uint8_t)(font5x8[mensaje[l]][c] ^ 0xFF);
+static uint8_t generar_columna_mapa(void) {
+    uint8_t fila;
+    uint8_t obstaculos = 0;
+    uint8_t variacion_hueco;
+
+    semilla_aleatoria = (uint8_t)((semilla_aleatoria >> 1) ^
+        ((semilla_aleatoria & 1) ? 0xB8 : 0));
+    variacion_hueco = semilla_aleatoria % 3;
+    if(variacion_hueco == 0 && centro_hueco > 2) {
+        centro_hueco--;
+    } else if(variacion_hueco == 2 && centro_hueco < 4) {
+        centro_hueco++;
+    }
+
+    for(fila = 0; fila < ALTO_MATRIZ; fila++) {
+        if(fila < centro_hueco - 1 || fila > centro_hueco + 1) {
+            obstaculos |= (uint8_t)(1u << fila);
         }
-        if(l + 1 < LETRAS) {
-            buffer[idx++] = 0xFF;
+    }
+    return obstaculos;
+}
+
+static void inicializar_mapa(void) {
+    uint8_t columna;
+    for(columna = 0; columna < ANCHO_MATRIZ; columna++) {
+        mapas[0][columna] = generar_columna_mapa();
+        mapas[1][columna] = mapas[0][columna];
+    }
+    mapas[0][COLUMNA_NAVE] &= 0x41;
+    mapas[1][COLUMNA_NAVE] = mapas[0][COLUMNA_NAVE];
+    mapa_activo = 0;
+}
+
+static uint8_t desplazar_mapa(void) {
+    uint8_t columna;
+    uint8_t mapa_nuevo = mapa_activo ^ 1;
+    uint8_t fila_nave = (uint8_t)(1u << posicion_nave);
+
+    for(columna = 0; columna < ANCHO_MATRIZ - 1; columna++) {
+        mapas[mapa_nuevo][columna] = mapas[mapa_activo][columna + 1];
+    }
+    mapas[mapa_nuevo][ANCHO_MATRIZ - 1] = generar_columna_mapa();
+
+    mapa_activo = mapa_nuevo;
+    return (mapas[mapa_nuevo][COLUMNA_NAVE] & fila_nave) != 0;
+}
+
+static void actualizar_boton(uint8_t presionado, uint8_t *contador,
+                             uint8_t *estado, int8_t movimiento) {
+    if(presionado) {
+        if(*contador < DEBOUNCE_FRAMES) {
+            (*contador)++;
+        }
+        if(*contador == DEBOUNCE_FRAMES && *estado == 0) {
+            *estado = 1;
+            juego_iniciado = 1;
+            juego_terminado = 0;
+            if(movimiento < 0 && posicion_nave > 0) {
+                posicion_nave--;
+            } else if(movimiento > 0 && posicion_nave < ALTO_MATRIZ - 1) {
+                posicion_nave++;
+            }
+            if(mapas[mapa_activo][COLUMNA_NAVE] & (1u << posicion_nave)) {
+                juego_terminado = 1;
+            }
+        }
+    } else {
+        if(*contador > 0) {
+            (*contador)--;
+        }
+        if(*contador == 0) {
+            *estado = 0;
         }
     }
 }
 
-static void desplazar_buffer(void) {
-    uint8_t primera_columna = buffer[0];
-    for(uint8_t i=0; i<COLS_TOTAL-1; i++) {
-        buffer[i] = buffer[i+1];
-    }
-    buffer[COLS_TOTAL-1] = primera_columna;
-}
-
-// Interrupción de TMR0: cada vez manda UN bit del dato actual en AB, genera pulso de CLK
 void TMR0_CustomISR(void) {
-
-    // Pulso de clock
     if (clk_switch == 0) {
+        uint8_t pixeles;
+        if(!juego_iniciado) {
+            pixeles = (columna_actual == COLUMNA_NAVE)
+                ? (uint8_t)(1u << posicion_nave) : 0;
+        } else {
+            pixeles = mapas[mapa_activo][columna_actual];
+            if(columna_actual == COLUMNA_NAVE) {
+                pixeles |= (uint8_t)(1u << posicion_nave);
+            }
+        }
+        LATB = (uint8_t)(~pixeles);
+
         CLK_SetHigh();
-        if(bit_corrimiento ==0)
-            AB_SetHigh(); // Enviar el bit actual
-        else
-            AB_SetLow(); // Enviar el bit actual
+        if(columna_actual == 0) {
+            AB_SetHigh();
+        } else {
+            AB_SetLow();
+        }
         clk_switch = 1;
-        
     } else {
         CLK_SetLow();
-        bit_corrimiento++;
-        if(bit_corrimiento >= 25) {
-            bit_corrimiento = 0; // Reinicia el corrimiento
-            rotacion_pendiente = 1;
+        columna_actual++;
+        if(columna_actual >= ANCHO_MATRIZ) {
+            columna_actual = 0;
+            if(frames_pendientes < 0xFF) {
+                frames_pendientes++;
+            }
         }
         clk_switch = 0;
     }
-    columna_actual++;
-    if(columna_actual >= COLS_TOTAL) {
-        columna_actual = 0; // Reinicia la columna
-    }
 }
 
-int main(void) { 
+int main(void) {
+    uint8_t contador_subir = 0;
+    uint8_t contador_bajar = 0;
+    uint8_t subir_presionado = 0;
+    uint8_t bajar_presionado = 0;
+    uint8_t frames_scroll = 0;
+    uint8_t procesar_frame;
+
     SYSTEM_Initialize();
     hc164_init();
-    generar_buffer_mensaje();
+    TMR0_PeriodSet(TMR0_INTERVAL_100US);
+    TMR0_CounterSet(TMR0_INTERVAL_100US);
+    ANCON0bits.ANSEL0 = 0;
+    ANCON0bits.ANSEL1 = 0;
+    TRISAbits.TRISA0 = 1;
+    TRISAbits.TRISA1 = 1;
+    LATB = 0x7F;
+    inicializar_mapa();
 
     TMR0_OverflowCallbackRegister(TMR0_CustomISR);
     TMR0_TMRInterruptEnable();
@@ -90,14 +158,32 @@ int main(void) {
     INTCONbits.GIE = 1;
 
     while(1) {
-        if(rotacion_pendiente != 0) {
-            rotacion_pendiente = 0;
-            desplazar_buffer();
+        procesar_frame = 0;
+        if(frames_pendientes != 0) {
+            INTCONbits.GIE = 0;
+            if(frames_pendientes != 0) {
+                frames_pendientes--;
+                procesar_frame = 1;
+            }
+            INTCONbits.GIE = 1;
         }
 
-        if(clk_switch == 0)
-            LATB = buffer[bit_corrimiento]; // Para debug, ver la columna actual en PORTB
-            
+        if(procesar_frame) {
+            actualizar_boton(PORTAbits.RA0 == 0, &contador_subir,
+                             &subir_presionado, -1);
+            actualizar_boton(PORTAbits.RA1 == 0, &contador_bajar,
+                             &bajar_presionado, 1);
+
+            if(juego_iniciado && !juego_terminado) {
+                frames_scroll++;
+                if(frames_scroll >= DIVISOR_SCROLL) {
+                    frames_scroll = 0;
+                    if(desplazar_mapa()) {
+                        juego_terminado = 1;
+                    }
+                }
+            }
+        }
     }
 }
 

@@ -65,13 +65,17 @@
 [v ___omul __omul `(uo  1 e 8 0 ]
 "5 /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/hc164.c
 [v _hc164_init hc164_init `(v  1 e 1 0 ]
-"35 /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
-[v _generar_buffer_mensaje generar_buffer_mensaje `(v  1 e 1 0 ]
-"47
-[v _desplazar_buffer desplazar_buffer `(v  1 s 1 desplazar_buffer ]
-"56
+"26 /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
+[v _generar_columna_mapa generar_columna_mapa `(uc  1 s 1 generar_columna_mapa ]
+"48
+[v _inicializar_mapa inicializar_mapa `(v  1 s 1 inicializar_mapa ]
+"59
+[v _desplazar_mapa desplazar_mapa `(uc  1 s 1 desplazar_mapa ]
+"73
+[v _actualizar_boton actualizar_boton `(v  1 s 1 actualizar_boton ]
+"102
 [v _TMR0_CustomISR TMR0_CustomISR `(v  1 e 1 0 ]
-"82
+"136
 [v _main main `(i  1 e 2 0 ]
 "39 /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/clock.c
 [v _CLOCK_Initialize CLOCK_Initialize `(v  1 e 1 0 ]
@@ -109,6 +113,10 @@
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 "48 /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c
 [v _TMR0_Initialize TMR0_Initialize `(v  1 e 1 0 ]
+"102
+[v _TMR0_CounterSet TMR0_CounterSet `(v  1 e 1 0 ]
+"114
+[v _TMR0_PeriodSet TMR0_PeriodSet `(v  1 e 1 0 ]
 "129
 [v _TMR0_TMRInterruptEnable TMR0_TMRInterruptEnable `(v  1 e 1 0 ]
 "139
@@ -121,6 +129,39 @@
 [v _IOCB IOCB `VEuc  1 e 1 @3930 ]
 "26844
 [v _WPUB WPUB `VEuc  1 e 1 @3931 ]
+[s S143 . 1 `uc 1 ANSEL0 1 0 :1:0 
+`uc 1 ANSEL1 1 0 :1:1 
+`uc 1 ANSEL2 1 0 :1:2 
+`uc 1 ANSEL3 1 0 :1:3 
+`uc 1 ANSEL4 1 0 :1:4 
+]
+"26979
+[s S149 . 1 `uc 1 PCFG0 1 0 :1:0 
+`uc 1 PCFG1 1 0 :1:1 
+`uc 1 PCFG2 1 0 :1:2 
+`uc 1 PCFG3 1 0 :1:3 
+`uc 1 PCFG4 1 0 :1:4 
+]
+[u S155 . 1 `S143 1 . 1 0 `S149 1 . 1 0 ]
+[v _ANCON0bits ANCON0bits `VES155  1 e 1 @3933 ]
+[s S251 . 1 `uc 1 RA0 1 0 :1:0 
+`uc 1 RA1 1 0 :1:1 
+`uc 1 RA2 1 0 :1:2 
+`uc 1 RA3 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 RA5 1 0 :1:5 
+`uc 1 RA6 1 0 :1:6 
+`uc 1 RA7 1 0 :1:7 
+]
+"29867
+[s S260 . 1 `uc 1 ULPWUIN 1 0 :1:0 
+`uc 1 . 1 0 :4:1 
+`uc 1 LVDIN 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 RJPU 1 0 :1:7 
+]
+[u S266 . 1 `S251 1 . 1 0 `S260 1 . 1 0 ]
+[v _PORTAbits PORTAbits `VES266  1 e 1 @3968 ]
 "30209
 [v _LATA LATA `VEuc  1 e 1 @3977 ]
 "30311
@@ -150,6 +191,18 @@
 [v _LATCbits LATCbits `VES42  1 e 1 @3979 ]
 "30629
 [v _TRISA TRISA `VEuc  1 e 1 @3986 ]
+[s S171 . 1 `uc 1 TRISA0 1 0 :1:0 
+`uc 1 TRISA1 1 0 :1:1 
+`uc 1 TRISA2 1 0 :1:2 
+`uc 1 TRISA3 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 TRISA5 1 0 :1:5 
+`uc 1 TRISA6 1 0 :1:6 
+`uc 1 TRISA7 1 0 :1:7 
+]
+"30646
+[u S180 . 1 `S171 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES180  1 e 1 @3986 ]
 "30686
 [v _TRISB TRISB `VEuc  1 e 1 @3987 ]
 "30748
@@ -170,30 +223,30 @@
 [v _REFOCON REFOCON `VEuc  1 e 1 @3994 ]
 "30919
 [v _OSCTUNE OSCTUNE `VEuc  1 e 1 @3995 ]
-[s S233 . 1 `uc 1 NOT_BOR 1 0 :1:0 
+[s S369 . 1 `uc 1 NOT_BOR 1 0 :1:0 
 ]
 "35440
-[s S235 . 1 `uc 1 . 1 0 :1:0 
+[s S371 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 NOT_POR 1 0 :1:1 
 ]
 "35440
-[s S238 . 1 `uc 1 . 1 0 :2:0 
+[s S374 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 NOT_PD 1 0 :1:2 
 ]
 "35440
-[s S241 . 1 `uc 1 . 1 0 :3:0 
+[s S377 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 NOT_TO 1 0 :1:3 
 ]
 "35440
-[s S244 . 1 `uc 1 . 1 0 :4:0 
+[s S380 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 NOT_RI 1 0 :1:4 
 ]
 "35440
-[s S247 . 1 `uc 1 . 1 0 :5:0 
+[s S383 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 NOT_CM 1 0 :1:5 
 ]
 "35440
-[s S250 . 1 `uc 1 nBOR 1 0 :1:0 
+[s S386 . 1 `uc 1 nBOR 1 0 :1:0 
 `uc 1 nPOR 1 0 :1:1 
 `uc 1 nPD 1 0 :1:2 
 `uc 1 nTO 1 0 :1:3 
@@ -203,7 +256,7 @@
 `uc 1 IPEN 1 0 :1:7 
 ]
 "35440
-[s S259 . 1 `uc 1 BOR 1 0 :1:0 
+[s S395 . 1 `uc 1 BOR 1 0 :1:0 
 `uc 1 POR 1 0 :1:1 
 `uc 1 PD 1 0 :1:2 
 `uc 1 TO 1 0 :1:3 
@@ -211,17 +264,17 @@
 `uc 1 CM 1 0 :1:5 
 ]
 "35440
-[u S266 . 1 `S233 1 . 1 0 `S235 1 . 1 0 `S238 1 . 1 0 `S241 1 . 1 0 `S244 1 . 1 0 `S247 1 . 1 0 `S250 1 . 1 0 `S259 1 . 1 0 ]
+[u S402 . 1 `S369 1 . 1 0 `S371 1 . 1 0 `S374 1 . 1 0 `S377 1 . 1 0 `S380 1 . 1 0 `S383 1 . 1 0 `S386 1 . 1 0 `S395 1 . 1 0 ]
 "35440
 "35440
-[v _RCONbits RCONbits `VES266  1 e 1 @4048 ]
+[v _RCONbits RCONbits `VES402  1 e 1 @4048 ]
 "35605
 [v _OSCCON2 OSCCON2 `VEuc  1 e 1 @4050 ]
 "35677
 [v _OSCCON OSCCON `VEuc  1 e 1 @4051 ]
 "35754
 [v _T0CON T0CON `VEuc  1 e 1 @4053 ]
-[s S608 . 1 `uc 1 T0PS 1 0 :3:0 
+[s S744 . 1 `uc 1 T0PS 1 0 :3:0 
 `uc 1 PSA 1 0 :1:3 
 `uc 1 T0SE 1 0 :1:4 
 `uc 1 T0CS 1 0 :1:5 
@@ -229,20 +282,20 @@
 `uc 1 TMR0ON 1 0 :1:7 
 ]
 "35774
-[s S615 . 1 `uc 1 T0PS0 1 0 :1:0 
+[s S751 . 1 `uc 1 T0PS0 1 0 :1:0 
 `uc 1 T0PS1 1 0 :1:1 
 `uc 1 T0PS2 1 0 :1:2 
 ]
 "35774
-[u S619 . 1 `S608 1 . 1 0 `S615 1 . 1 0 ]
+[u S755 . 1 `S744 1 . 1 0 `S751 1 . 1 0 ]
 "35774
 "35774
-[v _T0CONbits T0CONbits `VES619  1 e 1 @4053 ]
+[v _T0CONbits T0CONbits `VES755  1 e 1 @4053 ]
 "35831
 [v _TMR0L TMR0L `VEuc  1 e 1 @4054 ]
 "35851
 [v _TMR0H TMR0H `VEuc  1 e 1 @4055 ]
-[s S387 . 1 `uc 1 INT1IF 1 0 :1:0 
+[s S523 . 1 `uc 1 INT1IF 1 0 :1:0 
 `uc 1 INT2IF 1 0 :1:1 
 `uc 1 INT3IF 1 0 :1:2 
 `uc 1 INT1IE 1 0 :1:3 
@@ -252,7 +305,7 @@
 `uc 1 INT2IP 1 0 :1:7 
 ]
 "36450
-[s S396 . 1 `uc 1 INT1F 1 0 :1:0 
+[s S532 . 1 `uc 1 INT1F 1 0 :1:0 
 `uc 1 INT2F 1 0 :1:1 
 `uc 1 INT3F 1 0 :1:2 
 `uc 1 INT1E 1 0 :1:3 
@@ -262,15 +315,15 @@
 `uc 1 INT2P 1 0 :1:7 
 ]
 "36450
-[u S405 . 1 `S387 1 . 1 0 `S396 1 . 1 0 ]
+[u S541 . 1 `S523 1 . 1 0 `S532 1 . 1 0 ]
 "36450
 "36450
-[v _INTCON3bits INTCON3bits `VES405  1 e 1 @4080 ]
-[s S336 . 1 `uc 1 . 1 0 :7:0 
+[v _INTCON3bits INTCON3bits `VES541  1 e 1 @4080 ]
+[s S472 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 NOT_RBPU 1 0 :1:7 
 ]
 "36563
-[s S339 . 1 `uc 1 RBIP 1 0 :1:0 
+[s S475 . 1 `uc 1 RBIP 1 0 :1:0 
 `uc 1 INT3IP 1 0 :1:1 
 `uc 1 TMR0IP 1 0 :1:2 
 `uc 1 INTEDG3 1 0 :1:3 
@@ -280,18 +333,18 @@
 `uc 1 nRBPU 1 0 :1:7 
 ]
 "36563
-[s S348 . 1 `uc 1 . 1 0 :1:0 
+[s S484 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 INT3P 1 0 :1:1 
 `uc 1 T0IP 1 0 :1:2 
 `uc 1 . 1 0 :4:3 
 `uc 1 RBPU 1 0 :1:7 
 ]
 "36563
-[u S354 . 1 `S336 1 . 1 0 `S339 1 . 1 0 `S348 1 . 1 0 ]
+[u S490 . 1 `S472 1 . 1 0 `S475 1 . 1 0 `S484 1 . 1 0 ]
 "36563
 "36563
-[v _INTCON2bits INTCON2bits `VES354  1 e 1 @4081 ]
-[s S142 . 1 `uc 1 RBIF 1 0 :1:0 
+[v _INTCON2bits INTCON2bits `VES490  1 e 1 @4081 ]
+[s S202 . 1 `uc 1 RBIF 1 0 :1:0 
 `uc 1 INT0IF 1 0 :1:1 
 `uc 1 TMR0IF 1 0 :1:2 
 `uc 1 RBIE 1 0 :1:3 
@@ -301,7 +354,7 @@
 `uc 1 GIE_GIEH 1 0 :1:7 
 ]
 "36665
-[s S151 . 1 `uc 1 . 1 0 :1:0 
+[s S211 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 INT0F 1 0 :1:1 
 `uc 1 T0IF 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -311,29 +364,35 @@
 `uc 1 GIE 1 0 :1:7 
 ]
 "36665
-[s S160 . 1 `uc 1 . 1 0 :6:0 
+[s S220 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 GIEL 1 0 :1:6 
 `uc 1 GIEH 1 0 :1:7 
 ]
 "36665
-[u S164 . 1 `S142 1 . 1 0 `S151 1 . 1 0 `S160 1 . 1 0 ]
+[u S224 . 1 `S202 1 . 1 0 `S211 1 . 1 0 `S220 1 . 1 0 ]
 "36665
 "36665
-[v _INTCONbits INTCONbits `VES164  1 e 1 @4082 ]
-"8 /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
+[v _INTCONbits INTCONbits `VES224  1 e 1 @4082 ]
+"14 /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
 [v _columna_actual columna_actual `VEuc  1 s 1 columna_actual ]
-"9
-[v _bit_corrimiento bit_corrimiento `VEuc  1 s 1 bit_corrimiento ]
-"10
+"15
 [v _clk_switch clk_switch `VEuc  1 s 1 clk_switch ]
-"11
-[v _rotacion_pendiente rotacion_pendiente `VEuc  1 s 1 rotacion_pendiente ]
-"13
-[v _font5x8 font5x8 `C[11][5]uc  1 e 55 0 ]
-"28
-[v _mensaje mensaje `C[12]uc  1 e 12 0 ]
-"33
-[v _buffer buffer `[71]uc  1 e 71 0 ]
+"16
+[v _frames_pendientes frames_pendientes `VEuc  1 s 1 frames_pendientes ]
+"17
+[v _mapa_activo mapa_activo `VEuc  1 s 1 mapa_activo ]
+"18
+[v _juego_iniciado juego_iniciado `VEuc  1 s 1 juego_iniciado ]
+"19
+[v _juego_terminado juego_terminado `VEuc  1 s 1 juego_terminado ]
+"20
+[v _posicion_nave posicion_nave `VEuc  1 s 1 posicion_nave ]
+"21
+[v _mapas mapas `VE[2][25]uc  1 s 50 mapas ]
+"23
+[v _centro_hueco centro_hueco `uc  1 s 1 centro_hueco ]
+"24
+[v _semilla_aleatoria semilla_aleatoria `uc  1 s 1 semilla_aleatoria ]
 "38 /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/interrupt.c
 [v _INT0_InterruptHandler INT0_InterruptHandler `*.37(v  1 e 2 0 ]
 "39
@@ -346,40 +405,96 @@
 [v _tmr0PeriodCount tmr0PeriodCount `VEus  1 s 2 tmr0PeriodCount ]
 "41
 [v _TMR0_OverflowCallback TMR0_OverflowCallback `*.37(v  1 s 2 TMR0_OverflowCallback ]
-"82 /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
+"136 /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
 [v _main main `(i  1 e 2 0 ]
 {
-"102
+"138
+[v main@contador_bajar contador_bajar `uc  1 a 1 37 ]
+"137
+[v main@contador_subir contador_subir `uc  1 a 1 36 ]
+"140
+[v main@bajar_presionado bajar_presionado `uc  1 a 1 35 ]
+"139
+[v main@subir_presionado subir_presionado `uc  1 a 1 34 ]
+"141
+[v main@frames_scroll frames_scroll `uc  1 a 1 33 ]
+"142
+[v main@procesar_frame procesar_frame `uc  1 a 1 32 ]
+"188
+} 0
+"48
+[v _inicializar_mapa inicializar_mapa `(v  1 s 1 inicializar_mapa ]
+{
+"49
+[v inicializar_mapa@columna columna `uc  1 a 1 27 ]
+"57
 } 0
 "5 /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/hc164.c
 [v _hc164_init hc164_init `(v  1 e 1 0 ]
 {
 "12
 } 0
-"35 /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
-[v _generar_buffer_mensaje generar_buffer_mensaje `(v  1 e 1 0 ]
+"59 /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
+[v _desplazar_mapa desplazar_mapa `(uc  1 s 1 desplazar_mapa ]
 {
-"38
-[v generar_buffer_mensaje@c c `uc  1 a 1 1 ]
-"37
-[v generar_buffer_mensaje@l l `uc  1 a 1 2 ]
-"36
-[v generar_buffer_mensaje@idx idx `uc  1 a 1 0 ]
-"45
+"60
+[v desplazar_mapa@columna columna `uc  1 a 1 31 ]
+"61
+[v desplazar_mapa@mapa_nuevo mapa_nuevo `uc  1 a 1 30 ]
+"62
+[v desplazar_mapa@fila_nave fila_nave `uc  1 a 1 29 ]
+"71
 } 0
-"47
-[v _desplazar_buffer desplazar_buffer `(v  1 s 1 desplazar_buffer ]
+"26
+[v _generar_columna_mapa generar_columna_mapa `(uc  1 s 1 generar_columna_mapa ]
 {
-"49
-[v desplazar_buffer@i i `uc  1 a 1 3 ]
-"48
-[v desplazar_buffer@primera_columna primera_columna `uc  1 a 1 2 ]
-"53
+"27
+[v generar_columna_mapa@fila fila `uc  1 a 1 26 ]
+"29
+[v generar_columna_mapa@variacion_hueco variacion_hueco `uc  1 a 1 25 ]
+"28
+[v generar_columna_mapa@obstaculos obstaculos `uc  1 a 1 24 ]
+"46
 } 0
+"7 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+{
+"10
+[v ___awmod@sign sign `uc  1 a 1 16 ]
+[v ___awmod@counter counter `uc  1 a 1 15 ]
+"7
+[v ___awmod@dividend dividend `i  1 p 2 11 ]
+[v ___awmod@divisor divisor `i  1 p 2 13 ]
+"34
+} 0
+"73 /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
+[v _actualizar_boton actualizar_boton `(v  1 s 1 actualizar_boton ]
+{
+[v actualizar_boton@presionado presionado `uc  1 p 1 wreg ]
+[v actualizar_boton@presionado presionado `uc  1 p 1 wreg ]
+[v actualizar_boton@contador contador `*.30uc  1 p 1 11 ]
+"74
+[v actualizar_boton@estado estado `*.30uc  1 p 1 12 ]
+[v actualizar_boton@movimiento movimiento `c  1 p 1 13 ]
+[v actualizar_boton@presionado presionado `uc  1 p 1 17 ]
+"100
+} 1
 "129 /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c
 [v _TMR0_TMRInterruptEnable TMR0_TMRInterruptEnable `(v  1 e 1 0 ]
 {
 "132
+} 0
+"114
+[v _TMR0_PeriodSet TMR0_PeriodSet `(v  1 e 1 0 ]
+{
+[v TMR0_PeriodSet@periodCount periodCount `us  1 p 2 11 ]
+"117
+} 0
+"102
+[v _TMR0_CounterSet TMR0_CounterSet `(v  1 e 1 0 ]
+{
+[v TMR0_CounterSet@counterValue counterValue `us  1 p 2 11 ]
+"106
 } 0
 "39 /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/system.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
@@ -394,7 +509,7 @@
 "154
 [v _TMR0_OverflowCallbackRegister TMR0_OverflowCallbackRegister `(v  1 e 1 0 ]
 {
-[v TMR0_OverflowCallbackRegister@callbackHandler callbackHandler `*.37(v  1 p 2 2 ]
+[v TMR0_OverflowCallbackRegister@callbackHandler callbackHandler `*.37(v  1 p 2 11 ]
 "157
 } 0
 "38 /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/pins.c
@@ -410,25 +525,25 @@
 "197
 [v _INT3_SetInterruptHandler INT3_SetInterruptHandler `(v  1 e 1 0 ]
 {
-[v INT3_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 2 ]
+[v INT3_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 11 ]
 "199
 } 0
 "171
 [v _INT2_SetInterruptHandler INT2_SetInterruptHandler `(v  1 e 1 0 ]
 {
-[v INT2_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 2 ]
+[v INT2_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 11 ]
 "173
 } 0
 "145
 [v _INT1_SetInterruptHandler INT1_SetInterruptHandler `(v  1 e 1 0 ]
 {
-[v INT1_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 2 ]
+[v INT1_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 11 ]
 "147
 } 0
 "119
 [v _INT0_SetInterruptHandler INT0_SetInterruptHandler `(v  1 e 1 0 ]
 {
-[v INT0_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 2 ]
+[v INT0_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 11 ]
 "121
 } 0
 "39 /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/src/clock.c
@@ -446,10 +561,12 @@
 {
 "152
 } 0
-"56 /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
+"102 /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
 [v _TMR0_CustomISR TMR0_CustomISR `(v  1 e 1 0 ]
 {
-"80
+"104
+[v TMR0_CustomISR@pixeles pixeles `uc  1 a 1 4 ]
+"134
 } 0
 "159 /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/timer/src/tmr0.c
 [v _TMR0_DefaultOverflowCallback TMR0_DefaultOverflowCallback `(v  1 s 1 TMR0_DefaultOverflowCallback ]

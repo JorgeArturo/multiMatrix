@@ -1,5 +1,7 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"30429 /Users/jorgerodriguez/.mchp_packs/Microchip/PIC18F-K_DFP/1.17.312/xc8/pic/include/proc/pic18f25k80.h
+"30311 /Users/jorgerodriguez/.mchp_packs/Microchip/PIC18F-K_DFP/1.17.312/xc8/pic/include/proc/pic18f25k80.h
+[v _LATB `Vuc ~T0 @X0 0 e@3978 ]
+"30429
 [s S1161 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S1161 . LATC0 LATC1 LATC2 LATC3 LATC4 LATC5 LATC6 LATC7 ]
 "30439
@@ -15,6 +17,29 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
 "7 /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/hc164.h
 [v _hc164_init `(v ~T0 @X0 0 ef ]
+"292 /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/../timer/tmr0.h
+[v _TMR0_PeriodSet `(v ~T0 @X0 0 ef1`us ]
+"274
+[v _TMR0_CounterSet `(v ~T0 @X0 0 ef1`us ]
+"26964 /Users/jorgerodriguez/.mchp_packs/Microchip/PIC18F-K_DFP/1.17.312/xc8/pic/include/proc/pic18f25k80.h
+[s S1016 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1016 . ANSEL0 ANSEL1 ANSEL2 ANSEL3 ANSEL4 ]
+"26971
+[s S1017 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1017 . PCFG0 PCFG1 PCFG2 PCFG3 PCFG4 ]
+"26963
+[u S1015 `S1016 1 `S1017 1 ]
+[n S1015 . . . ]
+"26979
+[v _ANCON0bits `VS1015 ~T0 @X0 0 e@3933 ]
+"30635
+[s S1168 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1168 . TRISA0 TRISA1 TRISA2 TRISA3 . TRISA5 TRISA6 TRISA7 ]
+"30634
+[u S1167 `S1168 1 ]
+[n S1167 . . ]
+"30646
+[v _TRISAbits `VS1167 ~T0 @X0 0 e@3986 ]
 [v F12396 `(v ~T0 @X0 0 tf ]
 "341 /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/mcc_generated_files/system/../timer/tmr0.h
 [v _TMR0_OverflowCallbackRegister `(v ~T0 @X0 0 ef1`*F12396 ]
@@ -34,8 +59,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n S1491 . . . . ]
 "36665
 [v _INTCONbits `VS1491 ~T0 @X0 0 e@4082 ]
-"30311
-[v _LATB `Vuc ~T0 @X0 0 e@3978 ]
+"29849
+[s S1136 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1136 . RA0 RA1 RA2 RA3 . RA5 RA6 RA7 ]
+"29859
+[s S1137 :1 `uc 1 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1137 . ULPWUIN . LVDIN . RJPU ]
+"29848
+[u S1135 `S1136 1 `S1137 1 ]
+[n S1135 . . . ]
+"29867
+[v _PORTAbits `VS1135 ~T0 @X0 0 e@3968 ]
 "38 /Users/jorgerodriguez/.mchp_packs/Microchip/PIC18F-K_DFP/1.17.312/xc8/pic/include/proc/pic18f25k80.h
 [; <" RXERRCNT equ 0E41h ;# ">
 "108
@@ -952,331 +986,490 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; <" TOSH equ 0FFEh ;# ">
 "37195
 [; <" TOSU equ 0FFFh ;# ">
-"8 /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
+"14 /Users/jorgerodriguez/MPLABProjects/multiMatrix/config.mcc/main.c
 [v _columna_actual `Vuc ~T0 @X0 1 s ]
 [i _columna_actual
 -> -> 0 `i `uc
 ]
-"9
-[v _bit_corrimiento `Vuc ~T0 @X0 1 s ]
-[i _bit_corrimiento
--> -> 0 `i `uc
-]
-"10
+"15
 [v _clk_switch `Vuc ~T0 @X0 1 s ]
 [i _clk_switch
 -> -> 0 `i `uc
 ]
-"11
-[v _rotacion_pendiente `Vuc ~T0 @X0 1 s ]
-[i _rotacion_pendiente
+"16
+[v _frames_pendientes `Vuc ~T0 @X0 1 s ]
+[i _frames_pendientes
 -> -> 0 `i `uc
 ]
-[v F12408 `Cuc ~T0 @X0 -> 5 `i t ]
-"13
-[v _font5x8 `F12408 ~T0 @X0 -> 11 `i e ]
-[i _font5x8
-:U ..
-:U ..
+"17
+[v _mapa_activo `Vuc ~T0 @X0 1 s ]
+[i _mapa_activo
 -> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
-..
-:U ..
--> -> 255 `i `uc
--> -> 24 `i `uc
--> -> 24 `i `uc
--> -> 24 `i `uc
--> -> 255 `i `uc
-..
-:U ..
--> -> 126 `i `uc
--> -> 129 `i `uc
--> -> 129 `i `uc
--> -> 129 `i `uc
--> -> 126 `i `uc
-..
-:U ..
--> -> 255 `i `uc
--> -> 128 `i `uc
--> -> 128 `i `uc
--> -> 128 `i `uc
--> -> 128 `i `uc
-..
-:U ..
--> -> 254 `i `uc
--> -> 145 `i `uc
--> -> 145 `i `uc
--> -> 145 `i `uc
--> -> 254 `i `uc
-..
-:U ..
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
-..
-:U ..
--> -> 255 `i `uc
--> -> 6 `i `uc
--> -> 24 `i `uc
--> -> 6 `i `uc
--> -> 255 `i `uc
-..
-:U ..
--> -> 127 `i `uc
--> -> 128 `i `uc
--> -> 128 `i `uc
--> -> 128 `i `uc
--> -> 127 `i `uc
-..
-:U ..
--> -> 255 `i `uc
--> -> 6 `i `uc
--> -> 24 `i `uc
--> -> 96 `i `uc
--> -> 255 `i `uc
-..
-:U ..
--> -> 255 `i `uc
--> -> 129 `i `uc
--> -> 129 `i `uc
--> -> 102 `i `uc
--> -> 60 `i `uc
-..
-:U ..
--> -> 126 `i `uc
--> -> 129 `i `uc
--> -> 129 `i `uc
--> -> 129 `i `uc
--> -> 126 `i `uc
-..
-..
 ]
-"28
-[v _mensaje `Cuc ~T0 @X0 -> 12 `i e ]
-[i _mensaje
-:U ..
+"18
+[v _juego_iniciado `Vuc ~T0 @X0 1 s ]
+[i _juego_iniciado
 -> -> 0 `i `uc
--> -> 1 `i `uc
--> -> 2 `i `uc
+]
+"19
+[v _juego_terminado `Vuc ~T0 @X0 1 s ]
+[i _juego_terminado
+-> -> 0 `i `uc
+]
+"20
+[v _posicion_nave `Vuc ~T0 @X0 1 s ]
+[i _posicion_nave
 -> -> 3 `i `uc
--> -> 4 `i `uc
--> -> 5 `i `uc
--> -> 6 `i `uc
--> -> 7 `i `uc
--> -> 8 `i `uc
--> -> 9 `i `uc
--> -> 10 `i `uc
--> -> 0 `i `uc
-..
 ]
-"33
-[v _buffer `uc ~T0 @X0 -> 71 `i e ]
-[i _buffer
-:U ..
--> -> 0 `i `uc
-..
+[v F12411 `Vuc ~T0 @X0 -> 25 `i t ]
+"21
+[v _mapas `F12411 ~T0 @X0 -> 2 `i s ]
+"23
+[v _centro_hueco `uc ~T0 @X0 1 s ]
+[i _centro_hueco
+-> -> 3 `i `uc
 ]
-"35
-[v _generar_buffer_mensaje `(v ~T0 @X0 1 ef ]
+"24
+[v _semilla_aleatoria `uc ~T0 @X0 1 s ]
+[i _semilla_aleatoria
+-> -> 165 `i `uc
+]
+"26
+[v _generar_columna_mapa `(uc ~T0 @X0 1 sf ]
 {
-[e :U _generar_buffer_mensaje ]
+[e :U _generar_columna_mapa ]
 [f ]
-"36
-[v _idx `uc ~T0 @X0 1 a ]
-[e = _idx -> -> 0 `i `uc ]
-"37
+"27
+[v _fila `uc ~T0 @X0 1 a ]
+"28
+[v _obstaculos `uc ~T0 @X0 1 a ]
+[e = _obstaculos -> -> 0 `i `uc ]
+"29
+[v _variacion_hueco `uc ~T0 @X0 1 a ]
+"31
+[e = _semilla_aleatoria -> ^ >> -> _semilla_aleatoria `i -> 1 `i ? != & -> _semilla_aleatoria `i -> 1 `i -> 0 `i : -> 184 `i -> 0 `i `uc ]
+"33
+[e = _variacion_hueco -> % -> _semilla_aleatoria `i -> 3 `i `uc ]
+"34
+[e $ ! && == -> _variacion_hueco `i -> 0 `i > -> _centro_hueco `i -> 2 `i 1551  ]
 {
-[v _l `uc ~T0 @X0 1 a ]
-[e = _l -> -> 0 `i `uc ]
-[e $ < -> _l `ui / -> # _mensaje `ui -> # *U + &U _mensaje * -> -> -> 0 `i `ui `ux -> -> # *U &U _mensaje `ui `ux `ui 1551  ]
+"35
+[e -- _centro_hueco -> -> 1 `i `uc ]
+"36
+}
 [e $U 1552  ]
 [e :U 1551 ]
+[e $ ! && == -> _variacion_hueco `i -> 2 `i < -> _centro_hueco `i -> 4 `i 1553  ]
 {
+"37
+[e ++ _centro_hueco -> -> 1 `i `uc ]
 "38
+}
+[e :U 1553 ]
+[e :U 1552 ]
+"40
 {
-[v _c `uc ~T0 @X0 1 a ]
-[e = _c -> -> 0 `i `uc ]
-[e $ < -> _c `i -> 5 `i 1554  ]
+[e = _fila -> -> 0 `i `uc ]
+[e $ < -> _fila `i -> 7 `i 1554  ]
 [e $U 1555  ]
 [e :U 1554 ]
 {
-"39
-[e = *U + &U _buffer * -> ++ _idx -> -> 1 `i `uc `ux -> -> # *U &U _buffer `ui `ux -> ^ -> *U + &U *U + &U _font5x8 * -> *U + &U _mensaje * -> _l `ux -> -> # *U &U _mensaje `ui `ux `ux -> * -> # *U &U *U &U _font5x8 `ui -> -> 5 `i `ui `ux * -> _c `ux -> -> # *U &U *U + &U _font5x8 * -> *U + &U _mensaje * -> _l `ux -> -> # *U &U _mensaje `ui `ux `ux -> * -> # *U &U *U &U _font5x8 `ui -> -> 5 `i `ui `ux `ui `ux `i -> 255 `i `uc ]
-"40
-}
-[e ++ _c -> -> 1 `i `uc ]
-[e $ < -> _c `i -> 5 `i 1554  ]
-[e :U 1555 ]
-}
 "41
-[e $ ! < -> + -> _l `i -> 1 `i `ui / -> # _mensaje `ui -> # *U + &U _mensaje * -> -> -> 0 `i `ui `ux -> -> # *U &U _mensaje `ui `ux `ui 1557  ]
+[e $ ! || < -> _fila `i - -> _centro_hueco `i -> 1 `i > -> _fila `i + -> _centro_hueco `i -> 1 `i 1557  ]
 {
 "42
-[e = *U + &U _buffer * -> ++ _idx -> -> 1 `i `uc `ux -> -> # *U &U _buffer `ui `ux -> -> 255 `i `uc ]
+[e =| _obstaculos -> -> << -> 1 `ui -> _fila `i `uc `uc ]
 "43
 }
 [e :U 1557 ]
 "44
 }
-[e ++ _l -> -> 1 `i `uc ]
-[e $ < -> _l `ui / -> # _mensaje `ui -> # *U + &U _mensaje * -> -> -> 0 `i `ui `ux -> -> # *U &U _mensaje `ui `ux `ui 1551  ]
-[e :U 1552 ]
+[e ++ _fila -> -> 1 `i `uc ]
+[e $ < -> _fila `i -> 7 `i 1554  ]
+[e :U 1555 ]
 }
 "45
+[e ) _obstaculos ]
+[e $UE 1550  ]
+"46
 [e :UE 1550 ]
 }
-"47
-[v _desplazar_buffer `(v ~T0 @X0 1 sf ]
-{
-[e :U _desplazar_buffer ]
-[f ]
 "48
-[v _primera_columna `uc ~T0 @X0 1 a ]
-[e = _primera_columna *U + &U _buffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _buffer `ui `ux ]
-"49
+[v _inicializar_mapa `(v ~T0 @X0 1 sf ]
 {
-[v _i `uc ~T0 @X0 1 a ]
-[e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `ui - - + * / -> # _mensaje `ui -> # *U + &U _mensaje * -> -> -> 0 `i `ui `ux -> -> # *U &U _mensaje `ui `ux `ui -> -> 5 `i `ui / -> # _mensaje `ui -> # *U + &U _mensaje * -> -> -> 0 `i `ui `ux -> -> # *U &U _mensaje `ui `ux `ui -> -> 1 `i `ui -> -> 1 `i `ui 1559  ]
+[e :U _inicializar_mapa ]
+[f ]
+"49
+[v _columna `uc ~T0 @X0 1 a ]
+"50
+{
+[e = _columna -> -> 0 `i `uc ]
+[e $ < -> _columna `i -> 25 `i 1559  ]
 [e $U 1560  ]
 [e :U 1559 ]
 {
-"50
-[e = *U + &U _buffer * -> _i `ux -> -> # *U &U _buffer `ui `ux *U + &U _buffer * -> -> + -> _i `i -> 1 `i `ui `ux -> -> # *U &U _buffer `ui `ux ]
 "51
+[e = *U + &U *U + &U _mapas * -> -> -> 0 `i `ui `ux -> * -> # *U &U *U &U _mapas `ui -> -> 25 `i `ui `ux * -> _columna `ux -> -> # *U &U *U + &U _mapas * -> -> -> 0 `i `ui `ux -> * -> # *U &U *U &U _mapas `ui -> -> 25 `i `ui `ux `ui `ux ( _generar_columna_mapa ..  ]
+"52
+[e = *U + &U *U + &U _mapas * -> -> -> 1 `i `ui `ux -> * -> # *U &U *U &U _mapas `ui -> -> 25 `i `ui `ux * -> _columna `ux -> -> # *U &U *U + &U _mapas * -> -> -> 1 `i `ui `ux -> * -> # *U &U *U &U _mapas `ui -> -> 25 `i `ui `ux `ui `ux *U + &U *U + &U _mapas * -> -> -> 0 `i `ui `ux -> * -> # *U &U *U &U _mapas `ui -> -> 25 `i `ui `ux * -> _columna `ux -> -> # *U &U *U + &U _mapas * -> -> -> 0 `i `ui `ux -> * -> # *U &U *U &U _mapas `ui -> -> 25 `i `ui `ux `ui `ux ]
+"53
 }
-[e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `ui - - + * / -> # _mensaje `ui -> # *U + &U _mensaje * -> -> -> 0 `i `ui `ux -> -> # *U &U _mensaje `ui `ux `ui -> -> 5 `i `ui / -> # _mensaje `ui -> # *U + &U _mensaje * -> -> -> 0 `i `ui `ux -> -> # *U &U _mensaje `ui `ux `ui -> -> 1 `i `ui -> -> 1 `i `ui 1559  ]
+[e ++ _columna -> -> 1 `i `uc ]
+[e $ < -> _columna `i -> 25 `i 1559  ]
 [e :U 1560 ]
 }
-"52
-[e = *U + &U _buffer * -> - - + * / -> # _mensaje `ui -> # *U + &U _mensaje * -> -> -> 0 `i `ui `ux -> -> # *U &U _mensaje `ui `ux `ui -> -> 5 `i `ui / -> # _mensaje `ui -> # *U + &U _mensaje * -> -> -> 0 `i `ui `ux -> -> # *U &U _mensaje `ui `ux `ui -> -> 1 `i `ui -> -> 1 `i `ui `ux -> -> # *U &U _buffer `ui `ux _primera_columna ]
-"53
+"54
+[e =& *U + &U *U + &U _mapas * -> -> -> 0 `i `ui `ux -> * -> # *U &U *U &U _mapas `ui -> -> 25 `i `ui `ux * -> -> -> 4 `i `ui `ux -> -> # *U &U *U + &U _mapas * -> -> -> 0 `i `ui `ux -> * -> # *U &U *U &U _mapas `ui -> -> 25 `i `ui `ux `ui `ux -> -> 65 `i `uc ]
+"55
+[e = *U + &U *U + &U _mapas * -> -> -> 1 `i `ui `ux -> * -> # *U &U *U &U _mapas `ui -> -> 25 `i `ui `ux * -> -> -> 4 `i `ui `ux -> -> # *U &U *U + &U _mapas * -> -> -> 1 `i `ui `ux -> * -> # *U &U *U &U _mapas `ui -> -> 25 `i `ui `ux `ui `ux *U + &U *U + &U _mapas * -> -> -> 0 `i `ui `ux -> * -> # *U &U *U &U _mapas `ui -> -> 25 `i `ui `ux * -> -> -> 4 `i `ui `ux -> -> # *U &U *U + &U _mapas * -> -> -> 0 `i `ui `ux -> * -> # *U &U *U &U _mapas `ui -> -> 25 `i `ui `ux `ui `ux ]
+"56
+[e = _mapa_activo -> -> 0 `i `uc ]
+"57
 [e :UE 1558 ]
 }
-"56
+"59
+[v _desplazar_mapa `(uc ~T0 @X0 1 sf ]
+{
+[e :U _desplazar_mapa ]
+[f ]
+"60
+[v _columna `uc ~T0 @X0 1 a ]
+"61
+[v _mapa_nuevo `uc ~T0 @X0 1 a ]
+[e = _mapa_nuevo -> ^ -> _mapa_activo `i -> 1 `i `uc ]
+"62
+[v _fila_nave `uc ~T0 @X0 1 a ]
+[e = _fila_nave -> << -> 1 `ui -> _posicion_nave `i `uc ]
+"64
+{
+[e = _columna -> -> 0 `i `uc ]
+[e $ < -> _columna `i - -> 25 `i -> 1 `i 1563  ]
+[e $U 1564  ]
+[e :U 1563 ]
+{
+"65
+[e = *U + &U *U + &U _mapas * -> _mapa_nuevo `ux -> * -> # *U &U *U &U _mapas `ui -> -> 25 `i `ui `ux * -> _columna `ux -> -> # *U &U *U + &U _mapas * -> _mapa_nuevo `ux -> * -> # *U &U *U &U _mapas `ui -> -> 25 `i `ui `ux `ui `ux *U + &U *U + &U _mapas * -> _mapa_activo `ux -> * -> # *U &U *U &U _mapas `ui -> -> 25 `i `ui `ux * -> -> + -> _columna `i -> 1 `i `ui `ux -> -> # *U &U *U + &U _mapas * -> _mapa_activo `ux -> * -> # *U &U *U &U _mapas `ui -> -> 25 `i `ui `ux `ui `ux ]
+"66
+}
+[e ++ _columna -> -> 1 `i `uc ]
+[e $ < -> _columna `i - -> 25 `i -> 1 `i 1563  ]
+[e :U 1564 ]
+}
+"67
+[e = *U + &U *U + &U _mapas * -> _mapa_nuevo `ux -> * -> # *U &U *U &U _mapas `ui -> -> 25 `i `ui `ux * -> -> - -> 25 `i -> 1 `i `ui `ux -> -> # *U &U *U + &U _mapas * -> _mapa_nuevo `ux -> * -> # *U &U *U &U _mapas `ui -> -> 25 `i `ui `ux `ui `ux ( _generar_columna_mapa ..  ]
+"69
+[e = _mapa_activo _mapa_nuevo ]
+"70
+[e ) -> -> != & -> *U + &U *U + &U _mapas * -> _mapa_nuevo `ux -> * -> # *U &U *U &U _mapas `ui -> -> 25 `i `ui `ux * -> -> -> 4 `i `ui `ux -> -> # *U &U *U + &U _mapas * -> _mapa_nuevo `ux -> * -> # *U &U *U &U _mapas `ui -> -> 25 `i `ui `ux `ui `ux `i -> _fila_nave `i -> 0 `i `i `uc ]
+[e $UE 1562  ]
+"71
+[e :UE 1562 ]
+}
+"73
+[v _actualizar_boton `(v ~T0 @X0 1 sf4`uc`*uc`*uc`c ]
+"74
+{
+[e :U _actualizar_boton ]
+"73
+[v _presionado `uc ~T0 @X0 1 r1 ]
+[v _contador `*uc ~T0 @X0 1 r2 ]
+"74
+[v _estado `*uc ~T0 @X0 1 r3 ]
+[v _movimiento `c ~T0 @X0 1 r4 ]
+[f ]
+"75
+[e $ ! != -> _presionado `i -> 0 `i 1567  ]
+{
+"76
+[e $ ! < -> *U _contador `i -> 3 `i 1568  ]
+{
+"77
+[e ++ *U _contador -> -> 1 `i `uc ]
+"78
+}
+[e :U 1568 ]
+"79
+[e $ ! && == -> *U _contador `i -> 3 `i == -> *U _estado `i -> 0 `i 1569  ]
+{
+"80
+[e = *U _estado -> -> 1 `i `uc ]
+"81
+[e = _juego_iniciado -> -> 1 `i `uc ]
+"82
+[e = _juego_terminado -> -> 0 `i `uc ]
+"83
+[e $ ! && < -> _movimiento `i -> 0 `i > -> _posicion_nave `i -> 0 `i 1570  ]
+{
+"84
+[e -- _posicion_nave -> -> 1 `i `Vuc ]
+"85
+}
+[e $U 1571  ]
+[e :U 1570 ]
+[e $ ! && > -> _movimiento `i -> 0 `i < -> _posicion_nave `i - -> 7 `i -> 1 `i 1572  ]
+{
+"86
+[e ++ _posicion_nave -> -> 1 `i `Vuc ]
+"87
+}
+[e :U 1572 ]
+[e :U 1571 ]
+"88
+[e $ ! != & -> *U + &U *U + &U _mapas * -> _mapa_activo `ux -> * -> # *U &U *U &U _mapas `ui -> -> 25 `i `ui `ux * -> -> -> 4 `i `ui `ux -> -> # *U &U *U + &U _mapas * -> _mapa_activo `ux -> * -> # *U &U *U &U _mapas `ui -> -> 25 `i `ui `ux `ui `ux `ui << -> 1 `ui -> _posicion_nave `i -> -> 0 `i `ui 1573  ]
+{
+"89
+[e = _juego_terminado -> -> 1 `i `uc ]
+"90
+}
+[e :U 1573 ]
+"91
+}
+[e :U 1569 ]
+"92
+}
+[e $U 1574  ]
+[e :U 1567 ]
+{
+"93
+[e $ ! > -> *U _contador `i -> 0 `i 1575  ]
+{
+"94
+[e -- *U _contador -> -> 1 `i `uc ]
+"95
+}
+[e :U 1575 ]
+"96
+[e $ ! == -> *U _contador `i -> 0 `i 1576  ]
+{
+"97
+[e = *U _estado -> -> 0 `i `uc ]
+"98
+}
+[e :U 1576 ]
+"99
+}
+[e :U 1574 ]
+"100
+[e :UE 1566 ]
+}
+"102
 [v _TMR0_CustomISR `(v ~T0 @X0 1 ef ]
 {
 [e :U _TMR0_CustomISR ]
 [f ]
-"59
-[e $ ! == -> _clk_switch `i -> 0 `i 1563  ]
+"103
+[e $ ! == -> _clk_switch `i -> 0 `i 1578  ]
 {
-"60
-[e :U 1566 ]
+"104
+[v _pixeles `uc ~T0 @X0 1 a ]
+"105
+[e $ ! ! != -> _juego_iniciado `i -> 0 `i 1579  ]
+{
+"106
+[e = _pixeles -> ? == -> _columna_actual `i -> 4 `i : -> -> << -> 1 `ui -> _posicion_nave `i `uc `i -> 0 `i `uc ]
+"108
+}
+[e $U 1580  ]
+[e :U 1579 ]
+{
+"109
+[e = _pixeles *U + &U *U + &U _mapas * -> _mapa_activo `ux -> * -> # *U &U *U &U _mapas `ui -> -> 25 `i `ui `ux * -> _columna_actual `ux -> -> # *U &U *U + &U _mapas * -> _mapa_activo `ux -> * -> # *U &U *U &U _mapas `ui -> -> 25 `i `ui `ux `ui `ux ]
+"110
+[e $ ! == -> _columna_actual `i -> 4 `i 1581  ]
+{
+"111
+[e =| _pixeles -> -> << -> 1 `ui -> _posicion_nave `i `uc `uc ]
+"112
+}
+[e :U 1581 ]
+"113
+}
+[e :U 1580 ]
+"114
+[e = _LATB -> ~ -> _pixeles `i `uc ]
+"116
+[e :U 1584 ]
 {
 [e = . . _LATCbits 0 1 -> -> 1 `i `uc ]
 }
-[e :U 1565 ]
-"61
-[e $ ! == -> _bit_corrimiento `i -> 0 `i 1567  ]
-"62
-[e :U 1570 ]
+[e :U 1583 ]
+"117
+[e $ ! == -> _columna_actual `i -> 0 `i 1585  ]
+{
+"118
+[e :U 1588 ]
 {
 [e = . . _LATCbits 0 0 -> -> 1 `i `uc ]
 }
-[e :U 1569 ]
-[e $U 1571  ]
-"63
-[e :U 1567 ]
-"64
-[e :U 1574 ]
+[e :U 1587 ]
+"119
+}
+[e $U 1589  ]
+[e :U 1585 ]
+{
+"120
+[e :U 1592 ]
 {
 [e = . . _LATCbits 0 0 -> -> 0 `i `uc ]
 }
-[e :U 1573 ]
-[e :U 1571 ]
-"65
-[e = _clk_switch -> -> 1 `i `uc ]
-"67
+[e :U 1591 ]
+"121
 }
-[e $U 1575  ]
-[e :U 1563 ]
-{
-"68
+[e :U 1589 ]
+"122
+[e = _clk_switch -> -> 1 `i `uc ]
+"123
+}
+[e $U 1593  ]
 [e :U 1578 ]
+{
+"124
+[e :U 1596 ]
 {
 [e = . . _LATCbits 0 1 -> -> 0 `i `uc ]
 }
-[e :U 1577 ]
-"69
-[e ++ _bit_corrimiento -> -> 1 `i `Vuc ]
-"70
-[e $ ! >= -> _bit_corrimiento `i -> 25 `i 1579  ]
-{
-"71
-[e = _bit_corrimiento -> -> 0 `i `uc ]
-"72
-[e = _rotacion_pendiente -> -> 1 `i `uc ]
-"73
-}
-[e :U 1579 ]
-"74
-[e = _clk_switch -> -> 0 `i `uc ]
-"75
-}
-[e :U 1575 ]
-"76
+[e :U 1595 ]
+"125
 [e ++ _columna_actual -> -> 1 `i `Vuc ]
-"77
-[e $ ! >= -> _columna_actual `ui - + * / -> # _mensaje `ui -> # *U + &U _mensaje * -> -> -> 0 `i `ui `ux -> -> # *U &U _mensaje `ui `ux `ui -> -> 5 `i `ui / -> # _mensaje `ui -> # *U + &U _mensaje * -> -> -> 0 `i `ui `ux -> -> # *U &U _mensaje `ui `ux `ui -> -> 1 `i `ui 1580  ]
+"126
+[e $ ! >= -> _columna_actual `i -> 25 `i 1597  ]
 {
-"78
+"127
 [e = _columna_actual -> -> 0 `i `uc ]
-"79
+"128
+[e $ ! < -> _frames_pendientes `i -> 255 `i 1598  ]
+{
+"129
+[e ++ _frames_pendientes -> -> 1 `i `Vuc ]
+"130
 }
-[e :U 1580 ]
-"80
-[e :UE 1562 ]
+[e :U 1598 ]
+"131
+}
+[e :U 1597 ]
+"132
+[e = _clk_switch -> -> 0 `i `uc ]
+"133
+}
+[e :U 1593 ]
+"134
+[e :UE 1577 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"82
+"136
 [v _main `(i ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"83
+"137
+[v _contador_subir `uc ~T0 @X0 1 a ]
+[e = _contador_subir -> -> 0 `i `uc ]
+"138
+[v _contador_bajar `uc ~T0 @X0 1 a ]
+[e = _contador_bajar -> -> 0 `i `uc ]
+"139
+[v _subir_presionado `uc ~T0 @X0 1 a ]
+[e = _subir_presionado -> -> 0 `i `uc ]
+"140
+[v _bajar_presionado `uc ~T0 @X0 1 a ]
+[e = _bajar_presionado -> -> 0 `i `uc ]
+"141
+[v _frames_scroll `uc ~T0 @X0 1 a ]
+[e = _frames_scroll -> -> 0 `i `uc ]
+"142
+[v _procesar_frame `uc ~T0 @X0 1 a ]
+"144
 [e ( _SYSTEM_Initialize ..  ]
-"84
+"145
 [e ( _hc164_init ..  ]
-"85
-[e ( _generar_buffer_mensaje ..  ]
-"87
+"146
+[e ( _TMR0_PeriodSet (1 -> -> 65486 `ui `us ]
+"147
+[e ( _TMR0_CounterSet (1 -> -> 65486 `ui `us ]
+"148
+[e = . . _ANCON0bits 0 0 -> -> 0 `i `uc ]
+"149
+[e = . . _ANCON0bits 0 1 -> -> 0 `i `uc ]
+"150
+[e = . . _TRISAbits 0 0 -> -> 1 `i `uc ]
+"151
+[e = . . _TRISAbits 0 1 -> -> 1 `i `uc ]
+"152
+[e = _LATB -> -> 127 `i `uc ]
+"153
+[e ( _inicializar_mapa ..  ]
+"155
 [e ( _TMR0_OverflowCallbackRegister (1 &U _TMR0_CustomISR ]
-"88
+"156
 [e ( _TMR0_TMRInterruptEnable ..  ]
-"89
+"157
 [e = . . _INTCONbits 1 6 -> -> 1 `i `uc ]
-"90
+"158
 [e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
-"92
-[e :U 1583 ]
+"160
+[e :U 1601 ]
 {
-"93
-[e $ ! != -> _rotacion_pendiente `i -> 0 `i 1585  ]
+"161
+[e = _procesar_frame -> -> 0 `i `uc ]
+"162
+[e $ ! != -> _frames_pendientes `i -> 0 `i 1603  ]
 {
-"94
-[e = _rotacion_pendiente -> -> 0 `i `uc ]
-"95
-[e ( _desplazar_buffer ..  ]
-"96
+"163
+[e = . . _INTCONbits 1 7 -> -> 0 `i `uc ]
+"164
+[e $ ! != -> _frames_pendientes `i -> 0 `i 1604  ]
+{
+"165
+[e -- _frames_pendientes -> -> 1 `i `Vuc ]
+"166
+[e = _procesar_frame -> -> 1 `i `uc ]
+"167
 }
-[e :U 1585 ]
-"98
-[e $ ! == -> _clk_switch `i -> 0 `i 1586  ]
-"99
-[e = _LATB *U + &U _buffer * -> _bit_corrimiento `ux -> -> # *U &U _buffer `ui `ux ]
-[e :U 1586 ]
-"101
+[e :U 1604 ]
+"168
+[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
+"169
 }
-[e :U 1582 ]
-[e $U 1583  ]
-[e :U 1584 ]
-"102
-[e :UE 1581 ]
+[e :U 1603 ]
+"171
+[e $ ! != -> _procesar_frame `i -> 0 `i 1605  ]
+{
+"172
+[e ( _actualizar_boton (4 , , , -> -> == -> . . _PORTAbits 0 0 `i -> 0 `i `i `uc &U _contador_subir &U _subir_presionado -> -U -> 1 `i `c ]
+"174
+[e ( _actualizar_boton (4 , , , -> -> == -> . . _PORTAbits 0 1 `i -> 0 `i `i `uc &U _contador_bajar &U _bajar_presionado -> -> 1 `i `c ]
+"177
+[e $ ! && != -> _juego_iniciado `i -> 0 `i ! != -> _juego_terminado `i -> 0 `i 1606  ]
+{
+"178
+[e ++ _frames_scroll -> -> 1 `i `uc ]
+"179
+[e $ ! >= -> _frames_scroll `i -> 40 `i 1607  ]
+{
+"180
+[e = _frames_scroll -> -> 0 `i `uc ]
+"181
+[e $ ! != -> ( _desplazar_mapa ..  `i -> 0 `i 1608  ]
+{
+"182
+[e = _juego_terminado -> -> 1 `i `uc ]
+"183
+}
+[e :U 1608 ]
+"184
+}
+[e :U 1607 ]
+"185
+}
+[e :U 1606 ]
+"186
+}
+[e :U 1605 ]
+"187
+}
+[e :U 1600 ]
+[e $U 1601  ]
+[e :U 1602 ]
+"188
+[e :UE 1599 ]
 }
